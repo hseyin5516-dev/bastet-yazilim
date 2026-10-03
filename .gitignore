@@ -1,0 +1,6 @@
+bastet-yazilim/
+node_modules/
+.system_generated/
+site/
+.DS_Store
+Thumbs.db
