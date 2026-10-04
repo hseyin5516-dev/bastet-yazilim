@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tr" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
@@ -439,7 +439,7 @@
             </div>
 
             <div class="relative bg-[#dcf8c6] p-3 rounded-2xl rounded-tr-none shadow-sm text-xs text-gray-900 bubble-outgoing max-w-[90%] ml-auto">
-              “Aylık 990 TL'ye **Klinik Yönetim Sistemi** ile hasta kartı, seans ve kasayı tek ekranda toplayalım.”
+              “Aylık 10.000 TL'ye **Klinik Yönetim Sistemi** ile hasta kartı, seans ve kasayı tek ekranda toplayalım.”
               <div class="text-[9px] text-green-700 text-right mt-1">14:03 ✓✓</div>
             </div>
           </div>
@@ -754,7 +754,7 @@
     </div>
   </section>
 
-  <!-- ================= HAZIR YAZILIM SİSTEMLERİ: DASHBOARD MOCKUPLARIYLA (990 TL) ================= -->
+  <!-- ================= HAZIR YAZILIM SİSTEMLERİ: DASHBOARD MOCKUPLARIYLA (10.000 TL TEK FİYAT) ================= -->
   <section id="yazilimlar" class="py-20 bg-gray-50 border-t border-gray-200">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       
@@ -764,17 +764,17 @@
           Aylarca beklemeyin: Kurulmaya hazır sistemler
         </h2>
         <p class="text-gray-600 text-lg">
-          14 gün boyunca ücretsiz deneyin. Beğenirseniz sabit <strong class="text-indigo-600 font-extrabold">990 TL / ay</strong> abonelikle devam edin. Bağlayıcı taahhüt yok.
+          14 gün boyunca ücretsiz deneyin. Beğenirseniz tüm sistemler için sabit <strong class="text-indigo-600 font-extrabold">10.000 TL / ay</strong> tek fiyat abonelikle devam edin. Bağlayıcı taahhüt yok.
         </p>
       </div>
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
         
         <!-- Ürün 1: Randevu -->
-        <div class="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm flex flex-col justify-between hover:border-indigo-300 hover:shadow-md transition">
+        <div onclick="openSystemModal('randevu')" class="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm flex flex-col justify-between hover:border-indigo-400 hover:shadow-xl transition cursor-pointer group">
           <div>
             <!-- Mini Takvim Mockup -->
-            <div class="bg-indigo-50/60 p-3 rounded-2xl border border-indigo-100 mb-4 text-[11px]">
+            <div class="bg-indigo-50/60 p-3 rounded-2xl border border-indigo-100 mb-4 text-[11px] group-hover:border-indigo-200 transition">
               <div class="flex items-center justify-between font-bold text-gray-700 mb-2 pb-1 border-b border-indigo-200/50">
                 <span>Bugün Randevuları</span>
                 <span class="text-indigo-600">3 Randevu</span>
@@ -792,24 +792,26 @@
             </div>
 
             <div class="flex items-center justify-between mb-2">
-              <h4 class="font-bold text-gray-900 text-lg">Randevu Yönetim Sistemi</h4>
+              <h4 class="font-bold text-gray-900 text-lg group-hover:text-indigo-600 transition">Randevu Yönetim Sistemi</h4>
               <span class="text-[10px] font-bold text-green-700 bg-green-50 px-2 py-0.5 rounded-full">14 Gün Ücretsiz</span>
             </div>
             <p class="text-xs text-gray-500 leading-relaxed mb-4">
               Müşterileriniz online randevu alsın, otomatik WhatsApp/SMS hatırlatması gitsin. Kuaför, berber, diyetisyen için birebir.
             </p>
           </div>
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-            <span class="text-lg font-black text-indigo-600">990 TL <span class="text-xs font-normal text-gray-400">/ ay</span></span>
-            <a href="https://wa.me/905515149511?text=Randevu%20yönetim%20sistemi%20demosunu%20denemek%20istiyorum." target="_blank" class="text-xs font-bold text-gray-700 hover:text-indigo-600 flex items-center gap-1">Demo İste →</a>
+          <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+            <span class="text-lg font-black text-indigo-600">10.000 TL <span class="text-xs font-normal text-gray-400">/ ay</span></span>
+            <button type="button" class="text-xs font-bold text-indigo-600 group-hover:text-white bg-indigo-50 group-hover:bg-indigo-600 px-3 py-1.5 rounded-xl transition flex items-center gap-1">
+              Detayları Gör →
+            </button>
           </div>
         </div>
 
         <!-- Ürün 2: Klinik -->
-        <div class="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm flex flex-col justify-between hover:border-indigo-300 hover:shadow-md transition">
+        <div onclick="openSystemModal('klinik')" class="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm flex flex-col justify-between hover:border-indigo-400 hover:shadow-xl transition cursor-pointer group">
           <div>
             <!-- Mini Hasta Kartı Mockup -->
-            <div class="bg-red-50/60 p-3 rounded-2xl border border-red-100 mb-4 text-[11px]">
+            <div class="bg-red-50/60 p-3 rounded-2xl border border-red-100 mb-4 text-[11px] group-hover:border-red-200 transition">
               <div class="flex items-center justify-between font-bold text-gray-700 mb-2 pb-1 border-b border-red-200/50">
                 <span>Hasta Dosyası #1042</span>
                 <span class="text-red-600 font-bold">Klinik</span>
@@ -827,24 +829,26 @@
             </div>
 
             <div class="flex items-center justify-between mb-2">
-              <h4 class="font-bold text-gray-900 text-lg">Klinik Yönetim Sistemi</h4>
+              <h4 class="font-bold text-gray-900 text-lg group-hover:text-indigo-600 transition">Klinik Yönetim Sistemi</h4>
               <span class="text-[10px] font-bold text-red-700 bg-red-50 px-2 py-0.5 rounded-full">Sağlık</span>
             </div>
             <p class="text-xs text-gray-500 leading-relaxed mb-4">
               Hasta kartı, tedavi planı, seans ve taksit takibi. Diş klinikleri ve özel muayenehaneler için sade panel.
             </p>
           </div>
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-            <span class="text-lg font-black text-indigo-600">990 TL <span class="text-xs font-normal text-gray-400">/ ay</span></span>
-            <a href="https://wa.me/905515149511?text=Klinik%20yönetim%20sistemi%20demosunu%20denemek%20istiyorum." target="_blank" class="text-xs font-bold text-gray-700 hover:text-indigo-600 flex items-center gap-1">Demo İste →</a>
+          <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+            <span class="text-lg font-black text-indigo-600">10.000 TL <span class="text-xs font-normal text-gray-400">/ ay</span></span>
+            <button type="button" class="text-xs font-bold text-indigo-600 group-hover:text-white bg-indigo-50 group-hover:bg-indigo-600 px-3 py-1.5 rounded-xl transition flex items-center gap-1">
+              Detayları Gör →
+            </button>
           </div>
         </div>
 
         <!-- Ürün 3: Ön Muhasebe -->
-        <div class="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm flex flex-col justify-between hover:border-indigo-300 hover:shadow-md transition">
+        <div onclick="openSystemModal('muhasebe')" class="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm flex flex-col justify-between hover:border-indigo-400 hover:shadow-xl transition cursor-pointer group">
           <div>
             <!-- Mini Muhasebe Mockup -->
-            <div class="bg-amber-50/60 p-3 rounded-2xl border border-amber-100 mb-4 text-[11px]">
+            <div class="bg-amber-50/60 p-3 rounded-2xl border border-amber-100 mb-4 text-[11px] group-hover:border-amber-200 transition">
               <div class="flex items-center justify-between font-bold text-gray-700 mb-2 pb-1 border-b border-amber-200/50">
                 <span>Ekim Ayı Kasa Durumu</span>
                 <span class="text-green-600 font-black">+42.850 ₺</span>
@@ -862,24 +866,26 @@
             </div>
 
             <div class="flex items-center justify-between mb-2">
-              <h4 class="font-bold text-gray-900 text-lg">Sade Ön Muhasebe & Kasa</h4>
+              <h4 class="font-bold text-gray-900 text-lg group-hover:text-indigo-600 transition">Sade Ön Muhasebe & Kasa</h4>
               <span class="text-[10px] font-bold text-amber-700 bg-amber-50 px-2 py-0.5 rounded-full">Finans</span>
             </div>
             <p class="text-xs text-gray-500 leading-relaxed mb-4">
               Karmaşık programlara binlerce lira vermeyin. Cari hesap, gelir-gider, fatura ve kasa takibini kolayca yapın.
             </p>
           </div>
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-            <span class="text-lg font-black text-indigo-600">990 TL <span class="text-xs font-normal text-gray-400">/ ay</span></span>
-            <a href="https://wa.me/905515149511?text=Ön%20muhasebe%20yazılımı%20demosunu%20denemek%20istiyorum." target="_blank" class="text-xs font-bold text-gray-700 hover:text-indigo-600 flex items-center gap-1">Demo İste →</a>
+          <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+            <span class="text-lg font-black text-indigo-600">10.000 TL <span class="text-xs font-normal text-gray-400">/ ay</span></span>
+            <button type="button" class="text-xs font-bold text-indigo-600 group-hover:text-white bg-indigo-50 group-hover:bg-indigo-600 px-3 py-1.5 rounded-xl transition flex items-center gap-1">
+              Detayları Gör →
+            </button>
           </div>
         </div>
 
         <!-- Ürün 4: CRM -->
-        <div class="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm flex flex-col justify-between hover:border-indigo-300 hover:shadow-md transition">
+        <div onclick="openSystemModal('crm')" class="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm flex flex-col justify-between hover:border-indigo-400 hover:shadow-xl transition cursor-pointer group">
           <div>
             <!-- Mini CRM Kanban Mockup -->
-            <div class="bg-blue-50/60 p-3 rounded-2xl border border-blue-100 mb-4 text-[11px]">
+            <div class="bg-blue-50/60 p-3 rounded-2xl border border-blue-100 mb-4 text-[11px] group-hover:border-blue-200 transition">
               <div class="flex items-center justify-between font-bold text-gray-700 mb-2 pb-1 border-b border-blue-200/50">
                 <span>Satış Hattı (Pipeline)</span>
                 <span class="text-blue-600 font-bold">12 Aday</span>
@@ -897,24 +903,26 @@
             </div>
 
             <div class="flex items-center justify-between mb-2">
-              <h4 class="font-bold text-gray-900 text-lg">Müşteri & CRM Takibi</h4>
+              <h4 class="font-bold text-gray-900 text-lg group-hover:text-indigo-600 transition">Müşteri & CRM Takibi</h4>
               <span class="text-[10px] font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded-full">Satış</span>
             </div>
             <p class="text-xs text-gray-500 leading-relaxed mb-4">
               Hangi müşteriyle ne konuşuldu, ne teklif verildi, sözleşme ne zaman bitiyor? Ekibinizin tüm satış hattını yönetin.
             </p>
           </div>
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-            <span class="text-lg font-black text-indigo-600">990 TL <span class="text-xs font-normal text-gray-400">/ ay</span></span>
-            <a href="https://wa.me/905515149511?text=CRM%20yazılımı%20demosunu%20denemek%20istiyorum." target="_blank" class="text-xs font-bold text-gray-700 hover:text-indigo-600 flex items-center gap-1">Demo İste →</a>
+          <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+            <span class="text-lg font-black text-indigo-600">10.000 TL <span class="text-xs font-normal text-gray-400">/ ay</span></span>
+            <button type="button" class="text-xs font-bold text-indigo-600 group-hover:text-white bg-indigo-50 group-hover:bg-indigo-600 px-3 py-1.5 rounded-xl transition flex items-center gap-1">
+              Detayları Gör →
+            </button>
           </div>
         </div>
 
         <!-- Ürün 5: Oto Servis -->
-        <div class="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm flex flex-col justify-between hover:border-indigo-300 hover:shadow-md transition">
+        <div onclick="openSystemModal('otoservis')" class="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm flex flex-col justify-between hover:border-indigo-400 hover:shadow-xl transition cursor-pointer group">
           <div>
             <!-- Mini Servis İş Emri Mockup -->
-            <div class="bg-gray-100/80 p-3 rounded-2xl border border-gray-200 mb-4 text-[11px]">
+            <div class="bg-gray-100/80 p-3 rounded-2xl border border-gray-200 mb-4 text-[11px] group-hover:border-gray-300 transition">
               <div class="flex items-center justify-between font-bold text-gray-700 mb-2 pb-1 border-b border-gray-300/60">
                 <span class="font-mono bg-gray-800 text-white px-1.5 py-0.5 rounded text-[10px]">34 BZT 1903</span>
                 <span class="text-green-600 font-bold">Hazır</span>
@@ -926,24 +934,26 @@
             </div>
 
             <div class="flex items-center justify-between mb-2">
-              <h4 class="font-bold text-gray-900 text-lg">Oto Servis & Tamir Takip</h4>
+              <h4 class="font-bold text-gray-900 text-lg group-hover:text-indigo-600 transition">Oto Servis & Tamir Takip</h4>
               <span class="text-[10px] font-bold text-gray-700 bg-gray-100 px-2 py-0.5 rounded-full">Otomotiv</span>
             </div>
             <p class="text-xs text-gray-500 leading-relaxed mb-4">
               Araç plakası, iş emri, takılan parça, müşteri onaylı maliyet ve kasa takibi. Servis aşamaları tek ekranda.
             </p>
           </div>
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-            <span class="text-lg font-black text-indigo-600">990 TL <span class="text-xs font-normal text-gray-400">/ ay</span></span>
-            <a href="https://wa.me/905515149511?text=Oto%20servis%20yazılımı%20demosunu%20görmek%20istiyorum." target="_blank" class="text-xs font-bold text-gray-700 hover:text-indigo-600 flex items-center gap-1">Demo İste →</a>
+          <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+            <span class="text-lg font-black text-indigo-600">10.000 TL <span class="text-xs font-normal text-gray-400">/ ay</span></span>
+            <button type="button" class="text-xs font-bold text-indigo-600 group-hover:text-white bg-indigo-50 group-hover:bg-indigo-600 px-3 py-1.5 rounded-xl transition flex items-center gap-1">
+              Detayları Gör →
+            </button>
           </div>
         </div>
 
         <!-- Ürün 6: Emlak -->
-        <div class="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm flex flex-col justify-between hover:border-indigo-300 hover:shadow-md transition">
+        <div onclick="openSystemModal('emlak')" class="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm flex flex-col justify-between hover:border-indigo-400 hover:shadow-xl transition cursor-pointer group">
           <div>
             <!-- Mini Emlak Portföy Mockup -->
-            <div class="bg-orange-50/60 p-3 rounded-2xl border border-orange-100 mb-4 text-[11px]">
+            <div class="bg-orange-50/60 p-3 rounded-2xl border border-orange-100 mb-4 text-[11px] group-hover:border-orange-200 transition">
               <div class="flex items-center justify-between font-bold text-gray-700 mb-2 pb-1 border-b border-orange-200/50">
                 <span>Kadıköy Moda 3+1</span>
                 <span class="text-orange-600 font-bold">Portföy #88</span>
@@ -955,16 +965,18 @@
             </div>
 
             <div class="flex items-center justify-between mb-2">
-              <h4 class="font-bold text-gray-900 text-lg">Emlak & Portföy Yönetimi</h4>
+              <h4 class="font-bold text-gray-900 text-lg group-hover:text-indigo-600 transition">Emlak & Portföy Yönetimi</h4>
               <span class="text-[10px] font-bold text-orange-700 bg-orange-50 px-2 py-0.5 rounded-full">Gayrimenkul</span>
             </div>
             <p class="text-xs text-gray-500 leading-relaxed mb-4">
               Portföy kayıtları, müşteri arama talepleriyle otomatik eşleştirme ve danışman bazlı portföy takibi.
             </p>
           </div>
-          <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-            <span class="text-lg font-black text-indigo-600">990 TL <span class="text-xs font-normal text-gray-400">/ ay</span></span>
-            <a href="https://wa.me/905515149511?text=Emlak%20yönetim%20sistemi%20demosunu%20incelemek%20istiyorum." target="_blank" class="text-xs font-bold text-gray-700 hover:text-indigo-600 flex items-center gap-1">Demo İste →</a>
+          <div class="pt-4 border-t border-gray-100 flex items-center justify-between">
+            <span class="text-lg font-black text-indigo-600">10.000 TL <span class="text-xs font-normal text-gray-400">/ ay</span></span>
+            <button type="button" class="text-xs font-bold text-indigo-600 group-hover:text-white bg-indigo-50 group-hover:bg-indigo-600 px-3 py-1.5 rounded-xl transition flex items-center gap-1">
+              Detayları Gör →
+            </button>
           </div>
         </div>
 
@@ -1281,6 +1293,78 @@
     <span class="font-bold text-sm hidden sm:inline-block pr-1">WhatsApp'tan Yaz</span>
   </a>
 
+  <!-- ================= HAZIR SİSTEMLER DETAY MODAL ================= -->
+  <div id="system-modal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-sm hidden opacity-0 transition-opacity duration-200" onclick="handleModalBackdropClick(event)">
+    <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-gray-100 p-6 sm:p-8 transform transition-transform duration-200 scale-95" id="system-modal-card" onclick="event.stopPropagation()">
+      <!-- Modal Header -->
+      <div class="flex items-start justify-between pb-4 border-b border-gray-100">
+        <div class="flex items-center gap-3">
+          <div id="modal-badge-icon" class="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl">
+            📅
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span id="modal-category" class="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-full bg-indigo-50 text-indigo-700">Kategori</span>
+              <span class="text-[10px] font-bold text-green-700 bg-green-50 px-2 py-0.5 rounded-full">14 Gün Ücretsiz Deneme</span>
+            </div>
+            <h3 id="modal-title" class="text-xl sm:text-2xl font-black text-gray-900 mt-0.5">Sistem Başlığı</h3>
+          </div>
+        </div>
+        <button type="button" onclick="closeSystemModal()" class="w-9 h-9 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-500 hover:text-gray-900 flex items-center justify-center transition" aria-label="Kapat">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="py-5 space-y-6">
+        <!-- Fiyat & Özet Kutusu -->
+        <div class="bg-gradient-to-r from-indigo-50 to-purple-50 border border-indigo-100/70 rounded-2xl p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+          <div>
+            <div class="text-xs text-gray-500 font-medium">Her Şey Dahil Sabit Abonelik</div>
+            <div class="text-2xl font-black text-indigo-600">10.000 TL <span class="text-xs font-normal text-gray-500">/ ay</span></div>
+          </div>
+          <div class="text-xs text-gray-600 space-y-0.5">
+            <div>✓ Sunucu, yedekleme & bakım dahil</div>
+            <div>✓ Sınırsız kullanıcı & taahhütsüz iptal</div>
+          </div>
+        </div>
+
+        <!-- Açıklama -->
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Sistem Özeti</h4>
+          <p id="modal-description" class="text-sm text-gray-700 leading-relaxed"></p>
+        </div>
+
+        <!-- Temel Özellikler / Modüller -->
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">Dahil Olan Modüller & Özellikler</h4>
+          <div id="modal-features" class="grid sm:grid-cols-2 gap-2.5">
+            <!-- Dinamik doldurulacak -->
+          </div>
+        </div>
+
+        <!-- Kimler İçin İdeal -->
+        <div class="bg-gray-50 rounded-2xl p-4 border border-gray-100">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">Kimler İçin İdeal?</h4>
+          <div id="modal-audience" class="flex flex-wrap gap-2">
+            <!-- Dinamik doldurulacak -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="pt-4 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <button type="button" onclick="closeSystemModal()" class="w-full sm:w-auto px-5 py-2.5 text-xs font-bold text-gray-600 hover:text-gray-900 transition text-center">
+          Pencereyi Kapat
+        </button>
+        <a id="modal-wa-btn" href="#" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#25d366] hover:bg-green-600 text-white font-bold text-sm px-6 py-3 rounded-xl shadow-lg transition">
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+          <span>Canlı Demo İste (WhatsApp)</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
   <!-- Lucide icons render script -->
   <script>
     lucide.createIcons();
@@ -1297,6 +1381,192 @@
       link.addEventListener('click', () => {
         mobileMenu.classList.add('hidden');
       });
+    });
+
+    // ================= HAZIR SİSTEMLER DETAY VERİLERİ =================
+    const softwareData = {
+      randevu: {
+        title: "Randevu Yönetim Sistemi",
+        icon: "📅",
+        iconBg: "bg-indigo-100 text-indigo-700",
+        category: "Hizmet & Randevu",
+        description: "Müşterilerinizin 7/24 telefon açmadan online randevu almasını sağlayan, randevu saatinden önce otomatik WhatsApp ve SMS hatırlatması gönderen modern yönetim sistemi.",
+        features: [
+          "Online Müşteri Randevu Sayfası (Kendi Alan Adınızda)",
+          "Otomatik WhatsApp & SMS Hatırlatma Mesajları",
+          "Personel / Uzman Bazlı Çalışma Takvimi",
+          "Hizmet Süresi ve Fiyat Tanımlama",
+          "Müşteri İptal & Saat Değişikliği Yönetimi",
+          "Mobil Uyumlu Yönetim Paneli & Bildirimler",
+          "Google Takvim (Calendar) Çift Yönlü Entegrasyon",
+          "Gelir & Günlük Kasa Raporlaması"
+        ],
+        audience: ["Güzellik Merkezleri", "Kuaför & Berberler", "Diyetisyenler", "Psikologlar", "Özel Ders Öğretmenleri", "Danışmanlar"],
+        waText: "Merhaba, 10.000 TL/ay olan Randevu Yönetim Sistemi için canlı demo görmek ve detayları öğrenmek istiyorum."
+      },
+      klinik: {
+        title: "Klinik & Muayenehane Yönetimi",
+        icon: "🩺",
+        iconBg: "bg-red-100 text-red-700",
+        category: "Sağlık & Klinik",
+        description: "Hasta kayıtları, detaylı tedavi geçmişi, seans planlamaları, reçete/not arşivi ve taksitli ödeme takiplerini tek bir güvenli panelden kolayca yönetin.",
+        features: [
+          "Kapsamlı Dijital Hasta Kartı & Dosya Yönetimi",
+          "Seanslı Tedavi Planı & Aşamalı İşlem Takibi",
+          "Ödeme Planı, Taksit & Kalan Bakiye Takibi",
+          "Hasta Randevu ve Kontrol Hatırlatma SMS/WhatsApp",
+          "Görsel / Röntgen / Rapor Dosyası Yükleme",
+          "Doktor & Asistan Yetkilendirme Sistemi",
+          "KVKK Uyumlu Güvenli Bulut Veritabanı",
+          "Aylık Klinik Gelir/Gider ve Karlılık Analizi"
+        ],
+        audience: ["Diş Klinikleri", "Fizyoterapistler", "Veteriner Klinikleri", "Estetik & Dermatoloji", "Özel Muayenehaneler"],
+        waText: "Merhaba, 10.000 TL/ay olan Klinik Yönetim Sistemi için canlı demo görmek ve detayları konuşmak istiyorum."
+      },
+      muhasebe: {
+        title: "Sade Ön Muhasebe & Kasa",
+        icon: "💰",
+        iconBg: "bg-amber-100 text-amber-700",
+        category: "Finans & Muhasebe",
+        description: "Büyük ve karmaşık programların kafa karıştıran yüzlerce gereksiz menüsü olmadan; cari hesap, gelir, gider, fatura ve günlük kasa akışınızı 5 dakikada kavrayacağınız sadelik.",
+        features: [
+          "Müşteri & Tedarikçi Cari Hesap Takibi",
+          "Gelir - Gider Girişi ve Kategori Bazlı Raporlama",
+          "Kasa & Banka Hesapları Bakiye Yönetimi",
+          "Vadesi Gelen Alacak & Borç Hatırlatıcıları",
+          "PDF Teklif ve Proforma Fatura Oluşturma",
+          "Excel / CSV İçe ve Dışa Veri Aktarımı",
+          "Tek Tıkla Aylık Net Kar/Zarar Raporu",
+          "Mobil Telefondan Anlık Kasa Görüntüleme"
+        ],
+        audience: ["Toptancılar & Perakendeciler", "Hizmet İşletmeleri", "Atölyeler & İmalathaneler", "Ajanslar", "Esnaf ve KOBİ'ler"],
+        waText: "Merhaba, 10.000 TL/ay olan Sade Ön Muhasebe & Kasa sistemi için demo ve bilgi almak istiyorum."
+      },
+      crm: {
+        title: "Müşteri & CRM Satış Takibi",
+        icon: "📊",
+        iconBg: "bg-blue-100 text-blue-700",
+        category: "Satış & Müşteri",
+        description: "Gelen müşteri adaylarını kaçırmayın. Hangi müşteriyle kim görüştü, ne teklif verildi, satış hattında (pipeline) hangi aşamada tek ekranda izleyin, satışlarınızı artırın.",
+        features: [
+          "Kanban Görünümlü Satış Hattı (Leads & Pipeline)",
+          "Müşteri Görüşme Notları & Arama Geçmişi",
+          "Teklif Hazırlama, Gönderme & Onay Takibi",
+          "Satış Temsilcisi Hedef ve Performans Takibi",
+          "Otomatik Görev & Hatırlatma Bildirimleri",
+          "Web Sitesi İletişim Formlarından Otomatik Kayıt",
+          "Sözleşme Bitiş & Yenileme Takibi",
+          "Satış Dönüşüm Oranı Analizleri"
+        ],
+        audience: ["B2B Şirketler", "Danışmanlık Firmaları", "Toptan Satış Ekipleri", "Eğitim Kurumları", "Hizmet Sektörü"],
+        waText: "Merhaba, 10.000 TL/ay olan CRM ve Müşteri Takip Sistemi için detaylı bilgi ve demo rica ediyorum."
+      },
+      otoservis: {
+        title: "Oto Servis & Tamir Takip",
+        icon: "🚗",
+        iconBg: "bg-slate-100 text-slate-800",
+        category: "Otomotiv & Servis",
+        description: "Servise giren aracın plakasından geçmişini görün. İş emri açın, yedek parça ve işçilik ekleyin, müşteriye WhatsApp ile onaylatın ve aracın teslim durumunu yönetin.",
+        features: [
+          "Plaka ile Anında Araç Kabul & Geçmiş Sorgulama",
+          "Dijital İş Emri & Yapılacak İşlemler Listesi",
+          "Yedek Parça Stok Takibi & Maliyet Hesabı",
+          "Müşteriye WhatsApp'tan Tek Tıkla Fiyat Onayı Gönderme",
+          "Teknisyen & Usta Görev Ataması",
+          "Araç Hazır Olduğunda Otomatik 'Aracınız Hazır' Bildirimi",
+          "Periyodik Bakım / Muayene Zamanı Hatırlatıcı SMS",
+          "Kasa, Tahsilat & Karlılık Raporu"
+        ],
+        audience: ["Oto Tamir & Bakım Servisleri", "Oto Ekspertizler", "Lastik & Jant Bayileri", "Detaylı Temizlik & Kaplama Merkezleri"],
+        waText: "Merhaba, 10.000 TL/ay olan Oto Servis & Tamir Takip Sistemi hakkında görüşmek ve demo incelemek istiyorum."
+      },
+      emlak: {
+        title: "Emlak & Portföy Yönetimi",
+        icon: "🏢",
+        iconBg: "bg-orange-100 text-orange-700",
+        category: "Gayrimenkul & Emlak",
+        description: "Portföyünüzdeki satılık ve kiralık gayrimenkulleri düzenleyin, müşteri arama talepleriyle otomatik eşleştirin, danışman performanslarını ve sözleşmeleri yönetin.",
+        features: [
+          "Satılık / Kiralık Portföy & İlan Yönetimi",
+          "Müşteri Talep Eşleştirme (Alıcı kriteriyle ilan eşleştirme)",
+          "Portföy Görsel, Video ve Konum Arşivi",
+          "Danışman Portföy Paylaşımı & Yetkilendirme",
+          "Tek Tıkla WhatsApp Portföy Sunumu Hazırlama",
+          "Sözleşme Bitiş & Tapu Süreci Takibi",
+          "Emlak Ofisi Kasa ve Komisyon Dağılım Hesabı",
+          "Mobil Cihazdan Hızlı Portföy Ekleme"
+        ],
+        audience: ["Emlak Ofisleri", "Gayrimenkul Danışmanları", "Proje Satış Ofisleri", "Arsa & Tarla Aracılık Şirketleri"],
+        waText: "Merhaba, 10.000 TL/ay olan Emlak & Portföy Yönetim Sistemi hakkında demo ve detay almak istiyorum."
+      }
+    };
+
+    function openSystemModal(key) {
+      const data = softwareData[key];
+      if (!data) return;
+
+      document.getElementById('modal-title').textContent = data.title;
+      document.getElementById('modal-category').textContent = data.category;
+      document.getElementById('modal-badge-icon').textContent = data.icon;
+      document.getElementById('modal-description').textContent = data.description;
+
+      // Özellikler listesi
+      const featuresContainer = document.getElementById('modal-features');
+      featuresContainer.innerHTML = data.features.map(feat => `
+        <div class="flex items-start gap-2 text-xs text-gray-700 bg-gray-50 p-2.5 rounded-xl border border-gray-100">
+          <i data-lucide="check-circle-2" class="w-4 h-4 text-green-500 shrink-0 mt-0.5"></i>
+          <span class="font-medium">${feat}</span>
+        </div>
+      `).join('');
+
+      // Hedef kitle
+      const audienceContainer = document.getElementById('modal-audience');
+      audienceContainer.innerHTML = data.audience.map(aud => `
+        <span class="text-xs bg-white text-gray-800 font-semibold px-2.5 py-1 rounded-lg border border-gray-200">
+          ${aud}
+        </span>
+      `).join('');
+
+      // WhatsApp linki
+      const waBtn = document.getElementById('modal-wa-btn');
+      waBtn.href = `https://wa.me/905515149511?text=${encodeURIComponent(data.waText)}`;
+
+      // Modal göster
+      const modal = document.getElementById('system-modal');
+      const card = document.getElementById('system-modal-card');
+      modal.classList.remove('hidden');
+      setTimeout(() => {
+        modal.classList.remove('opacity-0');
+        card.classList.remove('scale-95');
+        card.classList.add('scale-100');
+      }, 10);
+
+      document.body.style.overflow = 'hidden';
+      lucide.createIcons();
+    }
+
+    function closeSystemModal() {
+      const modal = document.getElementById('system-modal');
+      const card = document.getElementById('system-modal-card');
+      modal.classList.add('opacity-0');
+      card.classList.remove('scale-100');
+      card.classList.add('scale-95');
+      setTimeout(() => {
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }, 200);
+    }
+
+    function handleModalBackdropClick(e) {
+      if (e.target.id === 'system-modal') {
+        closeSystemModal();
+      }
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeSystemModal();
+      }
     });
   </script>
 </body>
