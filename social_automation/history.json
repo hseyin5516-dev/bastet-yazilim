@@ -1,0 +1,19 @@
+# Haftalık Plan Yöneticisi ve Arşiv
+# Bu dosya üretilen haftalık paketleri ve paylaşılan içeriklerin özetini tutar,
+# böylece gelecek haftalarda aynı konuların tekrarlanmasını önler.
+
+[
+  {
+    "week": 1,
+    "theme": "Kurumsal Temel & Hizmetler (Lansman)",
+    "topics": [
+      "Kurumsal Web Tasarım (3 Günde Teslimat, 3.450 TL)",
+      "Google SEO & Harita Sıralaması (Yerel Görünürlük)",
+      "Randevu & Klinik Yönetim Sistemleri",
+      "Meta Reklamları & WhatsApp Lead Stratejisi",
+      "Sade Ön Muhasebe & Kasa CRM Takibi",
+      "Web Güvenliği & Google Core Web Vitals Hız Standartları",
+      "Oto Servis & Emlak Portföy Sistemleri"
+    ]
+  }
+]

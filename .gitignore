@@ -4,3 +4,8 @@ node_modules/
 site/
 .DS_Store
 Thumbs.db
+
+# Social Automation Secrets & Output Cache
+social_automation/.env
+social_automation/__pycache__/
+social_automation/output/
