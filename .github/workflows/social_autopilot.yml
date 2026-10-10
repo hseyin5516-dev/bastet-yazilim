@@ -2,11 +2,21 @@ name: Bastet 7/24 Sosyal Medya Otopilot
 
 on:
   schedule:
-    # Her gün Türkiye Saati (Europe/Istanbul) ile sabah 10:00 (UTC 07:00)
+    # 1. SABAH OTURUMU: Türkiye Saati 10:00 (UTC 07:00) -> 6 Slayt Carousel + Sabah Hikayesi
     - cron: '0 7 * * *'
-    # Her gün Türkiye Saati ile akşam 19:00 (UTC 16:00 - Akşam Hikayesi için)
+    # 2. AKŞAM OTURUMU: Türkiye Saati 19:00 (UTC 16:00) -> Tek Görsel Afiş (varsa) + Akşam Hikayesi
     - cron: '0 16 * * *'
-  workflow_dispatch: # GitHub üzerinden manuel 'Run workflow' ile tetikleme imkanı
+  workflow_dispatch: # GitHub üzerinden manuel tetikleme
+    inputs:
+      session:
+        description: 'Çalıştırılacak oturum'
+        required: true
+        default: 'all'
+        type: choice
+        options:
+          - morning
+          - evening
+          - all
 
 jobs:
   publish_social:
@@ -42,6 +52,17 @@ jobs:
           echo "FACEBOOK_PAGE_ID=$FACEBOOK_PAGE_ID" >> social_automation/.env
           echo "META_API_VERSION=v21.0" >> social_automation/.env
 
-      - name: Bugünün Gönderilerini Canlı Yayınla
+      - name: Sabah 10:00 Gönderilerini Canlı Yayınla (Carousel + Sabah Hikayesi)
+        if: github.event.schedule == '0 7 * * *' || github.event.inputs.session == 'morning'
+        run: |
+          python social_automation/daily_runner.py --publish-morning
+
+      - name: Akşam 19:00 Gönderilerini Canlı Yayınla (Tek Görsel + Akşam Hikayesi)
+        if: github.event.schedule == '0 16 * * *' || github.event.inputs.session == 'evening'
+        run: |
+          python social_automation/daily_runner.py --publish-evening
+
+      - name: Tümünü Yayınla (Manuel All Seçilirse)
+        if: github.event.inputs.session == 'all'
         run: |
           python social_automation/daily_runner.py --publish-all

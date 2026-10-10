@@ -85,7 +85,8 @@ def show_status():
     print("=" * 75 + "\n")
 
 
-def run_today(publish_carousel=False, publish_single=False, publish_stories=False):
+def run_today(publish_carousel=False, publish_single=False, publish_stories=False,
+              publish_morning_story=True, publish_evening_story=True):
     """Bugünün içeriğini yürütür ve seçilen bileşenleri canlı yayınlar."""
     today_id = get_today_service_id()
     topic = SERVICES_DATA[today_id]
@@ -124,14 +125,15 @@ def run_today(publish_carousel=False, publish_single=False, publish_stories=Fals
             else:
                 print(f"💡 Bugünün Web Tasarım Tek Görsel Afişi hazır: {single_img}")
 
-    # Günlük 2 Hikaye (Instagram & Facebook Stories)
+    # Günlük Hikayeler (Instagram & Facebook Stories)
     story_morning = os.path.join(folder, "hikaye_sabah.png")
     story_evening = os.path.join(folder, "hikaye_aksam.png")
 
     if publish_stories:
         if configured:
-            print("\n🚀 [3/3] Günlük 2 Hikaye Yayınlanıyor (Instagram & Facebook)...")
-            if os.path.exists(story_morning):
+            print("\n🚀 [3/3] Günlük Hikayeler Yayınlanıyor (Instagram & Facebook)...")
+            # Sabah oturumu veya tam oturum
+            if publish_morning_story and os.path.exists(story_morning):
                 print("☀️ Sabah Hikayesi yükleniyor...")
                 if pub.ig_user_id:
                     try:
@@ -144,7 +146,8 @@ def run_today(publish_carousel=False, publish_single=False, publish_stories=Fals
                     except Exception as e:
                         print(f"⚠️ Facebook Sabah Hikayesi Hatası: {e}")
 
-            if os.path.exists(story_evening):
+            # Akşam oturumu veya tam oturum
+            if publish_evening_story and os.path.exists(story_evening):
                 print("🌙 Akşam Hikayesi yükleniyor...")
                 if pub.ig_user_id:
                     try:
@@ -165,13 +168,15 @@ def run_today(publish_carousel=False, publish_single=False, publish_stories=Fals
 def main():
     parser = argparse.ArgumentParser(description="Bastet Yazılım Sosyal Medya Otomasyon Motoru (360°)")
     parser.add_argument("--today", action="store_true", help="Bugüne ait içerikleri üretir.")
-    parser.add_argument("--all", action="store_true", help="Tüm 7 günün içeriklerini (Carousel, Afiş, Hikayeler) üretir.")
+    parser.add_argument("--all", action="store_true", help="Tüm 7 günün içeriklerini üretir.")
     parser.add_argument("--status", action="store_true", help="Haftalık içerik durumunu listeler.")
-    parser.add_argument("--service", type=str, choices=list(SERVICES_DATA.keys()), help="Belirli bir günü/hizmeti seçerek üretir.")
+    parser.add_argument("--service", type=str, choices=list(SERVICES_DATA.keys()), help="Belirli bir günü seçerek üretir.")
     parser.add_argument("--publish", action="store_true", help="Carousel gönderisini Meta API ile canlı yayınlar.")
     parser.add_argument("--publish-single", action="store_true", help="Bugün geçerli ise tek görsel afişi canlı yayınlar.")
-    parser.add_argument("--publish-stories", action="store_true", help="Bugünün sabah ve akşam hikayelerini canlı yayınlar.")
-    parser.add_argument("--publish-all", action="store_true", help="Bugün için planlanan TÜM içerikleri (Carousel + Tek Görsel + 2 Hikaye) canlı yayınlar.")
+    parser.add_argument("--publish-stories", action="store_true", help="Bugünün hikayelerini canlı yayınlar.")
+    parser.add_argument("--publish-morning", action="store_true", help="Sabah 10:00 oturumu: 6 Slayt Carousel + Sabah Hikayesi.")
+    parser.add_argument("--publish-evening", action="store_true", help="Akşam 19:00 oturumu: Tek Görsel Afiş (varsa) + Akşam Hikayesi.")
+    parser.add_argument("--publish-all", action="store_true", help="Bugün için planlanan TÜM içerikleri canlı yayınlar.")
 
     args = parser.parse_args()
 
@@ -187,12 +192,21 @@ def main():
             publish_service_folder(folder)
         else:
             publish_or_export(folder)
+    elif args.publish_morning:
+        # Sabah 10:00 Oturumu: Carousel + Sabah Hikayesi
+        run_today(publish_carousel=True, publish_single=False, publish_stories=True, 
+                  publish_morning_story=True, publish_evening_story=False)
+    elif args.publish_evening:
+        # Akşam 19:00 Oturumu: Tek Görsel Afiş + Akşam Hikayesi
+        run_today(publish_carousel=False, publish_single=True, publish_stories=True, 
+                  publish_morning_story=False, publish_evening_story=True)
     else:
         # Varsayılan veya --today
         p_car = args.publish or args.publish_all
         p_single = args.publish_single or args.publish_all
         p_story = args.publish_stories or args.publish_all
-        run_today(publish_carousel=p_car, publish_single=p_single, publish_stories=p_story)
+        run_today(publish_carousel=p_car, publish_single=p_single, publish_stories=p_story,
+                  publish_morning_story=True, publish_evening_story=True)
 
 
 if __name__ == "__main__":
