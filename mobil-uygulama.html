@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobil Uygulama (App) Geliştirme (20.000 TL'den Başlayan) | Bastet Yazılım</title>
+  <meta name="description" content="iOS ve Android mobil uygulama geliştirme. 20.000 TL'den başlayan MVP, e-ticaret, randevu ve kurumsal app çözümleri. Flutter ile App Store & Google Play yayını.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="logo.png">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            primary: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    @keyframes pulse-green {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.5); }
+      50% { box-shadow: 0 0 0 14px rgba(34, 197, 94, 0); }
+    }
+    .whatsapp-pulse {
+      animation: pulse-green 2s infinite;
+    }
+    .bg-grid-pattern {
+      background-size: 32px 32px;
+      background-image: 
+        linear-gradient(to right, rgba(99, 102, 241, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(99, 102, 241, 0.05) 1px, transparent 1px);
+    }
+  </style>
+</head>
+<body class="font-sans bg-white text-gray-900 antialiased selection:bg-indigo-500 selection:text-white">
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center group py-1">
+          <img src="logo.png" alt="Bastet Yazılım Logo" class="h-16 sm:h-[72px] w-auto max-w-[240px] object-contain transition transform group-hover:scale-105">
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden lg:flex items-center gap-1 xl:gap-2">
+          <a href="index.html" class="text-sm font-semibold text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-xl hover:bg-gray-50 transition">Ana Sayfa</a>
+          
+          <a href="web-hizmetleri.html" class="text-sm font-semibold text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-xl hover:bg-gray-50 transition flex items-center gap-1.5">
+            <i data-lucide="layout" class="w-4 h-4"></i>
+            <span>Web Sitesi & SEO</span>
+          </a>
+
+          <a href="ozel-yazilim.html" class="text-sm font-semibold text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-xl hover:bg-gray-50 transition flex items-center gap-1.5">
+            <i data-lucide="code-2" class="w-4 h-4"></i>
+            <span>Özel Yazılım</span>
+            <span class="text-[10px] font-black bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded-full">20.000 TL</span>
+          </a>
+
+          <a href="mobil-uygulama.html" class="text-sm font-bold text-indigo-600 bg-indigo-50/80 px-3 py-2 rounded-xl transition flex items-center gap-1.5">
+            <i data-lucide="smartphone" class="w-4 h-4"></i>
+            <span>Mobil App</span>
+            <span class="text-[10px] font-black bg-emerald-100 text-emerald-800 px-1.5 py-0.5 rounded-full">20.000 TL</span>
+          </a>
+
+          <a href="sosyal-medya.html" class="text-sm font-semibold text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-xl hover:bg-gray-50 transition flex items-center gap-1.5">
+            <i data-lucide="share-2" class="w-4 h-4"></i>
+            <span>Sosyal Medya & Reklam</span>
+          </a>
+
+          <a href="index.html#fiyatlar" class="text-sm font-bold text-gray-600 hover:text-indigo-600 px-2.5 py-2 rounded-xl hover:bg-gray-50 transition flex items-center gap-1">
+            <i data-lucide="tag" class="w-3.5 h-3.5"></i>
+            <span>Fiyatlar</span>
+          </a>
+        </nav>
+
+        <!-- CTA Button -->
+        <div class="hidden sm:flex items-center gap-3">
+          <a href="https://wa.me/905515149511?text=Merhaba,%20mobil%20uygulama%20(app)%20geli%C5%9Ftirme%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20teklifi%20almak%20istiyorum." target="_blank" class="inline-flex items-center gap-2 bg-[#25d366] hover:bg-green-600 text-white font-bold text-sm px-5 py-2.5 rounded-full shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>WhatsApp'tan Yaz</span>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Dropdown Menu -->
+      <div id="mobile-menu" class="hidden lg:hidden border-t border-gray-100 py-4 space-y-2">
+        <a href="index.html" class="block px-3 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-50 rounded-lg">Ana Sayfa</a>
+        <a href="web-hizmetleri.html" class="block px-3 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-50 rounded-lg">Web Sitesi & SEO</a>
+        <a href="ozel-yazilim.html" class="block px-3 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-50 rounded-lg">Özel Yazılım & Hazır Sistemler (20.000 TL)</a>
+        <a href="mobil-uygulama.html" class="block px-3 py-2 text-sm font-bold text-indigo-600 bg-indigo-50 rounded-lg">Mobil Uygulama / App (20.000 TL'den Başlayan)</a>
+        <a href="sosyal-medya.html" class="block px-3 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-50 rounded-lg">Sosyal Medya & Reklam</a>
+        <a href="index.html#fiyatlar" class="block px-3 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-50 rounded-lg">Fiyatlar</a>
+        <div class="pt-2">
+          <a href="https://wa.me/905515149511?text=Merhaba,%20mobil%20uygulama%20(app)%20geli%C5%9Ftirme%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20teklifi%20almak%20istiyorum." target="_blank" class="flex items-center justify-center gap-2 w-full bg-[#25d366] text-white font-bold text-sm py-2.5 rounded-xl">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>WhatsApp'tan Yaz</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden bg-gradient-to-b from-indigo-50/70 via-white to-white bg-grid-pattern border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+      <div class="text-center max-w-3xl mx-auto">
+        <div class="inline-flex items-center gap-2 bg-emerald-100 text-emerald-800 text-xs font-black uppercase tracking-wider px-3.5 py-1.5 rounded-full mb-5 shadow-sm border border-emerald-200">
+          <i data-lucide="smartphone" class="w-3.5 h-3.5"></i>
+          <span>iOS & Android Mobil Uygulama</span>
+        </div>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 tracking-tight leading-tight mb-5">
+          Fikrinizi Cebinize Taşıyın: <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-emerald-600">20.000 TL'den Başlayan</span> Mobil Uygulama Geliştirme
+        </h1>
+        <p class="text-base sm:text-lg text-gray-600 leading-relaxed mb-8 max-w-2xl mx-auto">
+          Müşterilerinizin telefonunda yer alın. Flutter teknolojisi sayesinde tek kod tabanından hem iPhone (iOS) hem Android için ışık hızında çalışan, push bildirimli ve mağaza onayına hazır mobil uygulamalar geliştiriyoruz.
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a href="#app-paketleri" class="inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm px-6 py-3.5 rounded-xl shadow-lg shadow-indigo-500/25 transition">
+            <span>Uygulama Paketlerini Gör (20.000 TL)</span>
+            <i data-lucide="arrow-down" class="w-4 h-4"></i>
+          </a>
+          <a href="https://wa.me/905515149511?text=Merhaba,%20mobil%20uygulama%20fikrim%20var,%20fiyat%20ve%20s%C3%BCre%C3%A7%20hakk%C4%B1nda%20g%C3%B6r%C3%BC%C5%9Fmek%20istiyorum." target="_blank" class="inline-flex items-center justify-center gap-2 bg-[#25d366] hover:bg-green-600 text-white font-bold text-sm px-6 py-3.5 rounded-xl shadow-md transition">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>Projenizi Bize Anlatın</span>
+          </a>
+        </div>
+
+        <!-- Trust Badges Bar -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 pt-10 border-t border-gray-100 text-left">
+          <div class="flex items-center gap-3 p-3 rounded-xl bg-white border border-gray-100 shadow-sm">
+            <div class="w-10 h-10 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center shrink-0">
+              <i data-lucide="layers" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <div class="text-xs font-bold text-gray-900">Çift Platform (Flutter)</div>
+              <div class="text-[11px] text-gray-500">Hem iOS hem Android</div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 p-3 rounded-xl bg-white border border-gray-100 shadow-sm">
+            <div class="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
+              <i data-lucide="bell" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <div class="text-xs font-bold text-gray-900">Push Bildirimler</div>
+              <div class="text-[11px] text-gray-500">Müşteriye tek tıkla mesaj</div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 p-3 rounded-xl bg-white border border-gray-100 shadow-sm">
+            <div class="w-10 h-10 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+              <i data-lucide="upload-cloud" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <div class="text-xs font-bold text-gray-900">Mağaza Danışmanlığı</div>
+              <div class="text-[11px] text-gray-500">App Store & Play Store</div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 p-3 rounded-xl bg-white border border-gray-100 shadow-sm">
+            <div class="w-10 h-10 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center shrink-0">
+              <i data-lucide="tag" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <div class="text-xs font-bold text-gray-900">20.000 TL Başlangıç</div>
+              <div class="text-[11px] text-gray-500">Ekonomik MVP çözümü</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MOBİL UYGULAMA PAKETLERİ ================= -->
+  <section id="app-paketleri" class="py-20 bg-gray-50 border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider bg-indigo-50 px-3 py-1 rounded-full">Mobil Çözümler</span>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 mt-3">Mobil Uygulama Paketleri</h2>
+        <p class="text-sm sm:text-base text-gray-600 mt-2">Girişimciler, işletmeler ve e-ticaret mağazaları için ölçeklenebilir ve yüksek performanslı mobil uygulamalar.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Paket 1: Mobil MVP (20.000 TL) -->
+        <div class="bg-white rounded-3xl p-8 border-2 border-indigo-500 shadow-xl relative flex flex-col justify-between transform md:-translate-y-2">
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-indigo-600 to-violet-600 text-white text-[11px] font-black uppercase tracking-wider px-4 py-1 rounded-full shadow-md">
+            🚀 En Popüler Başlangıç
+          </div>
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center">
+                <i data-lucide="rocket" class="w-6 h-6"></i>
+              </div>
+              <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full">10-14 Günde Teslim</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900">Mobil MVP (Fikir Doğrulama)</h3>
+            <p class="text-xs text-gray-500 mt-1">Uygulama fikrini pazarda hızla test etmek isteyen girişimciler ve başlangıç projeleri için.</p>
+
+            <div class="mt-6 pb-6 border-b border-gray-100">
+              <div class="flex items-baseline gap-1">
+                <span class="text-3xl sm:text-4xl font-black text-gray-900">20.000</span>
+                <span class="text-lg font-bold text-gray-500">TL</span>
+              </div>
+              <p class="text-[11px] text-gray-400 mt-1">Başlangıç fiyatı • Tek seferlik ödeme</p>
+            </div>
+
+            <ul class="mt-6 space-y-3 text-xs text-gray-600">
+              <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i> <span><strong>Flutter ile Tek Kodda</strong> iOS & Android Desteği</span></li>
+              <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i> <span>Kullanıcı Girişi & Profil (Telefon / E-posta)</span></li>
+              <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i> <span>Ana Fonksiyon Akışı (3-5 Temel Ekran)</span></li>
+              <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i> <span>Bulut Veritabanı & Hızlı API Entegrasyonu</span></li>
+              <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i> <span>Temel Push Bildirim (Notification) Sistemi</span></li>
+              <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i> <span>Google Play & App Store Yükleme Desteği</span></li>
+            </ul>
+          </div>
+
+          <div class="mt-8 pt-6 border-t border-gray-100">
+            <a href="https://wa.me/905515149511?text=Merhaba,%2020.000%20TL'den%20ba%C5%9Flayan%20Mobil%20MVP%20uygulama%20geli%C5%9Ftirme%20hakk%C4%B1nda%20g%C3%B6r%C3%BC%C5%9Fmek%20istiyorum." target="_blank" class="w-full flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm py-3 px-4 rounded-xl shadow-lg transition">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              <span>MVP Projeni Başlat (20.000 TL)</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Paket 2: İşletme & Randevu Mobil App -->
+        <div class="bg-white rounded-3xl p-8 border border-gray-200 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center">
+                <i data-lucide="calendar-check" class="w-6 h-6"></i>
+              </div>
+              <span class="text-xs font-bold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-full">Hizmet & İşletme</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900">İşletme & Randevu App</h3>
+            <p class="text-xs text-gray-500 mt-1">Klinikler, güzellik salonları, spor salonları ve teknik servisler için müşteri uygulaması.</p>
+
+            <div class="mt-6 pb-6 border-b border-gray-100">
+              <div class="flex items-baseline gap-1">
+                <span class="text-3xl sm:text-4xl font-black text-gray-900">30.000</span>
+                <span class="text-lg font-bold text-gray-500">TL</span>
+              </div>
+              <p class="text-[11px] text-gray-400 mt-1">Özelleştirilebilir modüller • Tam teslim</p>
+            </div>
+
+            <ul class="mt-6 space-y-3 text-xs text-gray-600">
+              <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i> <span>Müşteriye Özel 7/24 Online Randevu Alma</span></li>
+              <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i> <span>Otomatik Randevu Hatırlatma Bildirimi</span></li>
+              <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i> <span>Müşteri Puan / Sadakat / İndirim Kartı</span></li>
+              <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i> <span>Toplu Kampanya ve Duyuru Bildirimi Atma</span></li>
+              <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i> <span>Personel Seçimi & Çalışma Takvimi</span></li>
+              <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i> <span>Yönetici Web Paneli & Detaylı Raporlar</span></li>
+            </ul>
+          </div>
+
+          <div class="mt-8 pt-6 border-t border-gray-100">
+            <a href="https://wa.me/905515149511?text=Merhaba,%20%C4%B0%C5%9Fletme%20ve%20Randevu%20Mobil%20Uygulamas%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" class="w-full flex items-center justify-center gap-2 bg-gray-900 hover:bg-black text-white font-bold text-sm py-3 px-4 rounded-xl transition">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              <span>İşletme App Teklifi Al</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Paket 3: E-Ticaret Mobil Uygulaması -->
+        <div class="bg-white rounded-3xl p-8 border border-gray-200 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center">
+                <i data-lucide="shopping-cart" class="w-6 h-6"></i>
+              </div>
+              <span class="text-xs font-bold text-amber-600 bg-amber-50 px-2.5 py-1 rounded-full">Satış & Mağaza</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900">E-Ticaret Mobil Uygulaması</h3>
+            <p class="text-xs text-gray-500 mt-1">Mevcut web sitenizle senkron, müşterilerin tek dokunuşla alışveriş yapabileceği mağaza app'i.</p>
+
+            <div class="mt-6 pb-6 border-b border-gray-100">
+              <div class="flex items-baseline gap-1">
+                <span class="text-3xl sm:text-4xl font-black text-gray-900">40.000</span>
+                <span class="text-lg font-bold text-gray-500">TL</span>
+              </div>
+              <p class="text-[11px] text-gray-400 mt-1">Web sitenizle tam senkron • Yüksek hız</p>
+            </div>
+
+            <ul class="mt-6 space-y-3 text-xs text-gray-600">
+              <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i> <span>Mevcut Web Sitenizle Canlı Ürün & Stok Senkronu</span></li>
+              <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i> <span>İyzico / PayTR Mobil Kredi Kartı Ödemesi</span></li>
+              <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i> <span>Tek Dokunuşla Sipariş & Adres Kaydı</span></li>
+              <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i> <span>Sepette Kalan Ürün İçin Otomatik Push Bildirimi</span></li>
+              <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i> <span>Kargo Takibi & Anlık Sipariş Durum Bildirimi</span></li>
+              <li class="flex items-center gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 shrink-0"></i> <span>Favori Listesi & Özel İndirim Kuponları</span></li>
+            </ul>
+          </div>
+
+          <div class="mt-8 pt-6 border-t border-gray-100">
+            <a href="https://wa.me/905515149511?text=Merhaba,%20E-Ticaret%20Mobil%20Uygulamas%C4%B1%20hakk%C4%B1nda%20detayl%C4%B1%20fiyat%20ve%20bilgi%20almak%20istiyorum." target="_blank" class="w-full flex items-center justify-center gap-2 bg-gray-900 hover:bg-black text-white font-bold text-sm py-3 px-4 rounded-xl transition">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              <span>E-Ticaret App Teklifi Al</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ek Hizmet: Özel Saha & Operasyon Uygulamaları -->
+      <div class="mt-12 bg-white rounded-3xl p-8 border border-gray-200 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-start gap-4">
+          <div class="w-14 h-14 rounded-2xl bg-purple-50 text-purple-700 flex items-center justify-center shrink-0">
+            <i data-lucide="truck" class="w-7 h-7"></i>
+          </div>
+          <div>
+            <h4 class="text-lg font-bold text-gray-900">Özel Saha Operasyon & B2B Şirket Uygulamaları</h4>
+            <p class="text-xs sm:text-sm text-gray-600 mt-1 max-w-2xl leading-relaxed">
+              Kuryeleriniz, teknik servis ekipleriniz, depo çalışanlarınız veya bayileriniz için; barkod okuma, GPS konum takibi, çevrimdışı (offline) çalışma ve dijital imza özellikli kapalı devre kurumsal uygulamalar.
+            </p>
+          </div>
+        </div>
+        <div class="shrink-0 w-full md:w-auto">
+          <a href="https://wa.me/905515149511?text=Merhaba,%20%C5%9Firketim%20i%C3%A7in%20%C3%B6zel%20saha%20veya%20operasyon%20mobil%20uygulamas%C4%B1%20yapt%C4%B1rmak%20istiyorum." target="_blank" class="w-full md:w-auto inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm py-3.5 px-6 rounded-xl transition shadow-md">
+            <span>Özel Proje Teklifi İste</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= NEDEN FLUTTER ================= -->
+  <section class="py-20 bg-slate-950 text-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">Modern Teknoloji</span>
+        <h2 class="text-3xl sm:text-4xl font-black mt-3 leading-tight">
+          Neden Google Flutter ile <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300">Tek Projede İki Platform</span>?
+        </h2>
+        <p class="text-sm sm:text-base text-gray-400 mt-4 leading-relaxed">
+          Eski yöntemlerle hem iOS için Swift hem Android için Kotlin yazmak geliştirme bütçenizi ikiye katlardı. Google Flutter ile tek bir temiz kod tabanı yazarak hem iPhone'larda hem Android telefonlarda akıcı 60 FPS çalışan uygulamalar üretiyoruz.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-slate-900/90 border border-slate-800 rounded-3xl p-6 sm:p-8">
+          <div class="w-12 h-12 rounded-2xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-xl font-black mb-5">
+            <i data-lucide="wallet" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white">%50 Bütçe Tasarrufu</h3>
+          <p class="text-xs sm:text-sm text-gray-400 mt-2 leading-relaxed">
+            İki ayrı yazılımcı ekibi tutmak yerine tek bir projeyle iki büyük mağazayı (App Store & Play Store) aynı anda fethedebilirsiniz.
+          </p>
+        </div>
+
+        <div class="bg-slate-900/90 border border-slate-800 rounded-3xl p-6 sm:p-8">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl font-black mb-5">
+            <i data-lucide="zap" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white">Yüksek Hız & Akıcı Arayüz</h3>
+          <p class="text-xs sm:text-sm text-gray-400 mt-2 leading-relaxed">
+            Doğrudan cihazın işlemcisine derlenen kodlar sayesinde web siteleri gibi donmaz, native uygulamalar gibi pürüzsüz kayar.
+          </p>
+        </div>
+
+        <div class="bg-slate-900/90 border border-slate-800 rounded-3xl p-6 sm:p-8">
+          <div class="w-12 h-12 rounded-2xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-xl font-black mb-5">
+            <i data-lucide="refresh-cw" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white">Kolay Güncelleme & Bakım</h3>
+          <p class="text-xs sm:text-sm text-gray-400 mt-2 leading-relaxed">
+            Gelecekte yeni bir özellik eklemek istediğinizde her iki platforma aynı anda saniyeler içinde dağıtım yapabilirsiniz.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= UYGULAMA GELİŞTİRME SÜRECİ (4 ADIM) ================= -->
+  <section class="py-20 bg-white border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider bg-indigo-50 px-3 py-1 rounded-full">Adım Adım</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mt-3">Mobil Uygulama Nasıl Hazırlanır?</h2>
+        <p class="text-sm text-gray-600 mt-2">Fikirden mağaza onayına kadar tüm aşamaları şeffaf bir şekilde yönetiyoruz.</p>
+      </div>
+
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="w-14 h-14 rounded-2xl bg-indigo-50 text-indigo-600 font-black text-xl flex items-center justify-center mx-auto mb-4 border border-indigo-100">
+            1
+          </div>
+          <h4 class="text-base font-bold text-gray-900">UI/UX Tasarım</h4>
+          <p class="text-xs text-gray-500 mt-2 leading-relaxed">Uygulamanın tüm ekranlarını Figma üzerinde modern ve kullanıcı dostu şekilde çizer, onayınızı alırız.</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-14 h-14 rounded-2xl bg-indigo-50 text-indigo-600 font-black text-xl flex items-center justify-center mx-auto mb-4 border border-indigo-100">
+            2
+          </div>
+          <h4 class="text-base font-bold text-gray-900">Flutter ile Kodlama</h4>
+          <p class="text-xs text-gray-500 mt-2 leading-relaxed">Veritabanı, API entegrasyonu ve ekranları temiz mimari kurallarına uygun olarak kodlarız.</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-14 h-14 rounded-2xl bg-indigo-50 text-indigo-600 font-black text-xl flex items-center justify-center mx-auto mb-4 border border-indigo-100">
+            3
+          </div>
+          <h4 class="text-base font-bold text-gray-900">Cihaz Testi & Önizleme</h4>
+          <p class="text-xs text-gray-500 mt-2 leading-relaxed">Uygulamayı kendi telefonunuza test sürümü (TestFlight / APK) olarak yükletir, canlı denemenizi sağlarız.</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-600 font-black text-xl flex items-center justify-center mx-auto mb-4 border border-emerald-100">
+            4
+          </div>
+          <h4 class="text-base font-bold text-gray-900">Mağaza Yayını (App Store & Play)</h4>
+          <p class="text-xs text-gray-500 mt-2 leading-relaxed">Gerekli ekran görüntüleri ve açıklamalarla uygulamanızı mağazalara yükler, onay sürecini tamamlarız.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SSS BÖLÜMÜ ================= -->
+  <section class="py-20 bg-gray-50 border-b border-gray-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider bg-indigo-50 px-3 py-1 rounded-full">Merak Edilenler</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mt-2">Mobil Uygulama Hakkında Sıkça Sorulan Sorular</h2>
+      </div>
+
+      <div class="space-y-4">
+        <div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
+          <h3 class="text-base font-bold text-gray-900 flex items-center gap-2">
+            <i data-lucide="help-circle" class="w-4 h-4 text-indigo-600"></i>
+            <span>Apple App Store ve Google Play geliştirici hesapları kime ait olur?</span>
+          </h3>
+          <p class="text-xs sm:text-sm text-gray-600 mt-2 leading-relaxed">
+            Tamamen sizin şirketinize veya şahsınıza ait olur. Hesap açılış adımlarında size rehberlik eder, uygulamayı sizin adınıza mağazalara yükleriz. Mülkiyet %100 sizdedir.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
+          <h3 class="text-base font-bold text-gray-900 flex items-center gap-2">
+            <i data-lucide="help-circle" class="w-4 h-4 text-indigo-600"></i>
+            <span>Müşterilerime ücretsiz anlık bildirim (push notification) gönderebilir miyim?</span>
+          </h3>
+          <p class="text-xs sm:text-sm text-gray-600 mt-2 leading-relaxed">
+            Evet! Firebase Cloud Messaging altyapısıyla uygulamanızı indiren tüm kullanıcılara kampanya, indirim veya bilgilendirme bildirimlerini yönetim panelinden tek tuşla sınırsız ve ücretsiz gönderebilirsiniz.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
+          <h3 class="text-base font-bold text-gray-900 flex items-center gap-2">
+            <i data-lucide="help-circle" class="w-4 h-4 text-indigo-600"></i>
+            <span>20.000 TL başlangıç paketi (MVP) neleri kapsar?</span>
+          </h3>
+          <p class="text-xs sm:text-sm text-gray-600 mt-2 leading-relaxed">
+            MVP paketi; temel fikrinizi pazarda doğrulamak için gerekli kullanıcı girişi, ana işlem ekranları (3-5 ekran), bulut veritabanı ve mağaza yükleme hazırlığını kapsar. Fazla maliyete girmeden fikrinizi test etmek için en mantıklı başlangıçtır.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
+          <h3 class="text-base font-bold text-gray-900 flex items-center gap-2">
+            <i data-lucide="help-circle" class="w-4 h-4 text-indigo-600"></i>
+            <span>Uygulamanın kaynak kodlarını teslim ediyor musunuz?</span>
+          </h3>
+          <p class="text-xs sm:text-sm text-gray-600 mt-2 leading-relaxed">
+            Evet, proje tamamlandığında tüm Flutter kaynak kodları, tasarım dosyaları ve dokümantasyon eksiksiz olarak size teslim edilir.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= BÜYÜK CTA BANNER ================= -->
+  <section class="py-20 bg-gradient-to-br from-indigo-900 via-indigo-800 to-indigo-950 text-white relative overflow-hidden">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center relative z-10">
+      <h2 class="text-3xl sm:text-4xl font-black tracking-tight mb-4">Uygulamanızı Birlikte Geliştirelim</h2>
+      <p class="text-indigo-200 text-sm sm:text-base max-w-xl mx-auto mb-8">
+        Fikrinizi WhatsApp'tan bize anlatın, projenizin ekran şemasını ve net bütçe planını 15 dakika içinde birlikte çıkaralım.
+      </p>
+      <a href="https://wa.me/905515149511?text=Merhaba,%20mobil%20uygulama%20(app)%20yapt%C4%B1rmak%20istiyorum,%20fikrimi%20anlatmak%20istiyorum." target="_blank" class="inline-flex items-center gap-3 bg-[#25d366] hover:bg-green-600 text-white font-black text-base px-8 py-4 rounded-2xl shadow-xl transition transform hover:-translate-y-1">
+        <i data-lucide="message-circle" class="w-5 h-5"></i>
+        <span>WhatsApp'tan Hemen Fiyat Al</span>
+      </a>
+      <p class="text-xs text-indigo-300 mt-4">📞 0551 514 95 11 • Mobil Uygulama Geliştirme Danışmanlığı</p>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-slate-950 text-gray-400 py-12 border-t border-slate-900 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid md:grid-cols-4 gap-8 mb-8 pb-8 border-b border-slate-800/80">
+        <div class="space-y-3">
+          <img src="logo.png" alt="Bastet Yazılım" class="h-12 w-auto brightness-0 invert">
+          <p class="text-gray-400 leading-relaxed text-[11px]">
+            Bastet Yazılım; iOS & Android mobil uygulamalar, modern web tasarım, sektörel sistemler ve dijital reklam yönetimiyle işletmenizi büyütür.
+          </p>
+        </div>
+
+        <div>
+          <div class="font-bold text-white text-sm mb-3">Mobil Hizmetlerimiz</div>
+          <ul class="space-y-2">
+            <li><a href="mobil-uygulama.html#app-paketleri" class="hover:text-white transition">Mobil MVP (20.000 TL)</a></li>
+            <li><a href="mobil-uygulama.html#app-paketleri" class="hover:text-white transition">İşletme & Randevu Mobil App</a></li>
+            <li><a href="mobil-uygulama.html#app-paketleri" class="hover:text-white transition">E-Ticaret Mobil Uygulaması</a></li>
+            <li><a href="mobil-uygulama.html#app-paketleri" class="hover:text-white transition">Saha & Kurumsal Operasyon App</a></li>
+            <li><a href="mobil-uygulama.html" class="hover:text-white transition">Flutter Çapraz Platform</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="font-bold text-white text-sm mb-3">Sayfalar</div>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="hover:text-white transition">Ana Sayfa</a></li>
+            <li><a href="web-hizmetleri.html" class="hover:text-white transition">Web & SEO Paketleri</a></li>
+            <li><a href="ozel-yazilim.html" class="hover:text-white transition">Özel Yazılım (20.000 TL)</a></li>
+            <li><a href="mobil-uygulama.html" class="hover:text-white transition">Mobil Uygulama (20.000 TL)</a></li>
+            <li><a href="sosyal-medya.html" class="hover:text-white transition">Sosyal Medya & Reklam</a></li>
+            <li><a href="index.html#fiyatlar" class="hover:text-white transition">Şeffaf Fiyat Listesi</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="font-bold text-white text-sm mb-3">Doğrudan İletişim</div>
+          <p class="text-[11px] text-gray-400 mb-2">Sorularınız için WhatsApp hattımız 7/24 aktiftir.</p>
+          <a href="https://wa.me/905515149511" target="_blank" class="inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 font-bold text-sm">
+            <i data-lucide="phone" class="w-4 h-4"></i>
+            <span>0551 514 95 11</span>
+          </a>
+          <div class="mt-3 flex items-center gap-2 text-[11px] text-emerald-400">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+            <span>Mobil Geliştirici Çevrimiçi</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center justify-between text-[11px] text-gray-500 gap-4">
+        <div>&copy; 2026 Bastet Yazılım. Tüm hakları saklıdır.</div>
+        <div>iOS & Android • 20.000 TL'den Başlayan • Mağaza Yayını Dahil</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/905515149511?text=Merhaba,%20mobil%20uygulama%20(app)%20geli%C5%9Ftirme%20hakk%C4%B1nda%20bilgi%20ve%20fiyat%20teklifi%20almak%20istiyorum." target="_blank" class="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-[#25d366] text-white px-4 py-3 rounded-full shadow-2xl whatsapp-pulse hover:scale-105 transition duration-300 group" aria-label="WhatsApp Destek">
+    <i data-lucide="message-circle" class="w-6 h-6 fill-current"></i>
+    <span class="font-bold text-sm hidden sm:inline-block pr-1">Hemen Yazın</span>
+  </a>
+
+  <!-- Script -->
+  <script>
+    lucide.createIcons();
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  </script>
+</body>
+</html>
