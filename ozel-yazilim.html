@@ -58,59 +58,50 @@
     }
   </style>
 </head>
-<body class="font-sans bg-white text-gray-900 antialiased selection:bg-indigo-500 selection:text-white">
-
-  <!-- ================= NAVBAR ================= -->
+<body class="font-sans bg-white text-gray-900 antialiased selection:bg-indigo-500 selection:text-white">  <!-- ================= NAVBAR ================= -->
   <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 transition-all">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       <div class="flex items-center justify-between h-20">
         <!-- Logo -->
-        <a href="index.html" class="flex items-center group py-1">
-          <img src="logo.png" alt="Bastet Yazılım Logo" class="h-16 sm:h-[72px] w-auto max-w-[240px] object-contain transition transform group-hover:scale-105">
+        <a href="index.html" class="flex items-center group py-1 shrink-0">
+          <img src="logo.png" alt="Bastet Yazılım Logo" class="h-14 sm:h-16 w-auto max-w-[200px] sm:max-w-[230px] object-contain transition transform group-hover:scale-105">
         </a>
 
         <!-- Desktop Nav -->
-        <nav class="hidden lg:flex items-center gap-1.5 xl:gap-2">
-          <a href="index.html" class="text-sm font-semibold text-gray-700 hover:text-indigo-600 px-3.5 py-2 rounded-xl hover:bg-gray-50 transition">Ana Sayfa</a>
+        <nav class="hidden lg:flex items-center gap-1 xl:gap-2">
+          <a href="index.html" class="text-sm font-semibold text-gray-700 hover:text-indigo-600 hover:bg-gray-50 px-3.5 py-2 rounded-xl transition whitespace-nowrap">Ana Sayfa</a>
           
-          <a href="web-hizmetleri.html" class="text-sm font-semibold text-gray-700 hover:text-indigo-600 px-3.5 py-2 rounded-xl hover:bg-gray-50 transition flex items-center gap-1.5">
+          <a href="web-hizmetleri.html" class="text-sm font-semibold text-gray-700 hover:text-indigo-600 hover:bg-gray-50 px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 whitespace-nowrap">
             <i data-lucide="layout" class="w-4 h-4"></i>
             <span>Web Sitesi & SEO</span>
           </a>
 
-          <a href="ozel-yazilim.html" class="text-sm font-bold text-indigo-600 bg-indigo-50/80 px-3 py-2 rounded-xl transition flex items-center gap-1.5">
+          <a href="ozel-yazilim.html" class="text-sm font-bold text-indigo-600 bg-indigo-50/80 px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 whitespace-nowrap">
             <i data-lucide="code-2" class="w-4 h-4"></i>
             <span>Özel Yazılım</span>
-            <span class="text-[10px] font-black bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded-full">20.000 TL</span>
           </a>
 
-          <a href="mobil-uygulama.html" class="text-sm font-semibold text-gray-700 hover:text-indigo-600 px-3 py-2 rounded-xl hover:bg-gray-50 transition flex items-center gap-1.5">
+          <a href="mobil-uygulama.html" class="text-sm font-semibold text-gray-700 hover:text-indigo-600 hover:bg-gray-50 px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 whitespace-nowrap">
             <i data-lucide="smartphone" class="w-4 h-4"></i>
-            <span>Mobil App</span>
-            <span class="text-[10px] font-black bg-emerald-100 text-emerald-800 px-1.5 py-0.5 rounded-full">20.000 TL</span>
+            <span>Mobil Uygulama</span>
           </a>
 
-          <a href="sosyal-medya.html" class="text-sm font-semibold text-gray-700 hover:text-indigo-600 px-3.5 py-2 rounded-xl hover:bg-gray-50 transition flex items-center gap-1.5">
+          <a href="sosyal-medya.html" class="text-sm font-semibold text-gray-700 hover:text-indigo-600 hover:bg-gray-50 px-3.5 py-2 rounded-xl transition flex items-center gap-1.5 whitespace-nowrap">
             <i data-lucide="share-2" class="w-4 h-4"></i>
             <span>Sosyal Medya & Reklam</span>
-          </a>
-
-          <a href="index.html#fiyatlar" class="text-sm font-bold text-gray-600 hover:text-indigo-600 px-3 py-2 rounded-xl hover:bg-gray-50 transition flex items-center gap-1">
-            <i data-lucide="tag" class="w-3.5 h-3.5"></i>
-            <span>Fiyatlar</span>
           </a>
         </nav>
 
         <!-- CTA Button -->
-        <div class="hidden sm:flex items-center gap-3">
-          <a href="https://wa.me/905515149511?text=Merhaba,%20%C3%B6zel%20yaz%C4%B1l%C4%B1m%20ve%2020.000%20TL%20haz%C4%B1r%20sistemleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" class="inline-flex items-center gap-2 bg-[#25d366] hover:bg-green-600 text-white font-bold text-sm px-5 py-2.5 rounded-full shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5">
+        <div class="hidden sm:flex items-center gap-3 shrink-0">
+          <a href="https://wa.me/905515149511?text=Merhaba,%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" class="inline-flex items-center gap-2 bg-[#25d366] hover:bg-green-600 text-white font-bold text-sm px-5 py-2.5 rounded-full shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5 whitespace-nowrap">
             <i data-lucide="message-circle" class="w-4 h-4"></i>
             <span>WhatsApp'tan Yaz</span>
           </a>
         </div>
 
         <!-- Mobile Menu Button -->
-        <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100">
+        <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100" aria-label="Menüyü Aç">
           <i data-lucide="menu" class="w-6 h-6"></i>
         </button>
       </div>
@@ -119,12 +110,11 @@
       <div id="mobile-menu" class="hidden lg:hidden border-t border-gray-100 py-4 space-y-2">
         <a href="index.html" class="block px-3 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-50 rounded-lg">Ana Sayfa</a>
         <a href="web-hizmetleri.html" class="block px-3 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-50 rounded-lg">Web Sitesi & SEO</a>
-        <a href="ozel-yazilim.html" class="block px-3 py-2 text-sm font-bold text-indigo-600 bg-indigo-50 rounded-lg">Özel Yazılım & Hazır Sistemler (20.000 TL)</a>
-        <a href="mobil-uygulama.html" class="block px-3 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-50 rounded-lg">Mobil Uygulama / App (20.000 TL)</a>
+        <a href="ozel-yazilim.html" class="block px-3 py-2 text-sm font-bold text-indigo-600 bg-indigo-50 rounded-lg">Özel Yazılım</a>
+        <a href="mobil-uygulama.html" class="block px-3 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-50 rounded-lg">Mobil Uygulama</a>
         <a href="sosyal-medya.html" class="block px-3 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-50 rounded-lg">Sosyal Medya & Reklam</a>
-        <a href="index.html#fiyatlar" class="block px-3 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-50 rounded-lg">Fiyatlar</a>
         <div class="pt-2">
-          <a href="https://wa.me/905515149511?text=Merhaba,%20%C3%B6zel%20yaz%C4%B1l%C4%B1m%20ve%2020.000%20TL%20haz%C4%B1r%20sistemleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" class="flex items-center justify-center gap-2 w-full bg-[#25d366] text-white font-bold text-sm py-2.5 rounded-xl">
+          <a href="https://wa.me/905515149511?text=Merhaba,%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" class="flex items-center justify-center gap-2 w-full bg-[#25d366] text-white font-bold text-sm py-2.5 rounded-xl">
             <i data-lucide="message-circle" class="w-4 h-4"></i>
             <span>WhatsApp'tan Yaz</span>
           </a>
