@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bastet Yazılım | Web Tasarım, Özel Yazılım ve Dijital Çözümler</title>
-  <meta name="description" content="Bastet Yazılım; web tasarım, özel yazılım, mobil uygulama ve Meta reklam yönetimiyle işletmenizi büyütür. Şeffaf fiyat, 3 günde teslim, doğrudan WhatsApp desteği.">
+  <title>Bastet Yazılım | Web Tasarım, Özel Yazılım, SEO & Dijital Çözümler</title>
+  <meta name="description" content="Bastet Yazılım; web tasarım, özel yazılım sistemleri, yapay zeka destekli SEO otomasyonu ve Meta reklam yönetimiyle işletmenizi büyütür. Şeffaf fiyat, 3 günde teslim, doğrudan WhatsApp desteği.">
   
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png">
@@ -87,7 +87,7 @@
 <body class="font-sans bg-white text-gray-900 antialiased selection:bg-indigo-500 selection:text-white">
 
   <!-- ================= NAVBAR ================= -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 transition-all">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       <div class="flex items-center justify-between h-20">
         <!-- Logo -->
@@ -95,36 +95,197 @@
           <img src="logo.png" alt="Bastet Yazılım Logo" class="h-16 sm:h-[72px] w-auto max-w-[240px] object-contain transition transform group-hover:scale-105">
         </a>
 
-        <!-- Desktop Nav -->
-        <nav class="hidden md:flex items-center gap-8">
-          <a href="#fiyatlar" class="text-sm font-bold text-indigo-600 hover:text-indigo-800 transition">Fiyatlar</a>
-          <a href="#derdini-anlat" class="text-sm font-semibold text-gray-600 hover:text-indigo-600 transition">Çözümler</a>
-          <a href="#hizmetler" class="text-sm font-semibold text-gray-600 hover:text-indigo-600 transition">Hizmetler</a>
-          <a href="#yazilimlar" class="text-sm font-semibold text-gray-600 hover:text-indigo-600 transition">Yazılımlar</a>
-          <a href="#surec" class="text-sm font-semibold text-gray-600 hover:text-indigo-600 transition">Nasıl Çalışıyoruz?</a>
-          <a href="#sss" class="text-sm font-semibold text-gray-600 hover:text-indigo-600 transition">SSS</a>
+        <!-- Desktop Nav with Dropdowns -->
+        <nav class="hidden lg:flex items-center gap-2 xl:gap-3">
+          <a href="#fiyatlar" class="text-sm font-bold text-indigo-600 hover:text-indigo-800 px-3 py-2 rounded-xl hover:bg-indigo-50/60 transition flex items-center gap-1.5">
+            <i data-lucide="tag" class="w-4 h-4"></i>
+            <span>Fiyatlar</span>
+          </a>
+
+          <!-- Dropdown 1: Web Sitesi Hizmetleri -->
+          <div class="relative group">
+            <button class="text-sm font-semibold text-gray-700 group-hover:text-indigo-600 px-3 py-2 rounded-xl group-hover:bg-gray-50 flex items-center gap-1 transition">
+              <span>Web Sitesi Hizmetleri</span>
+              <i data-lucide="chevron-down" class="w-4 h-4 text-gray-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform"></i>
+            </button>
+            <!-- Dropdown Menu -->
+            <div class="absolute top-full left-0 w-80 bg-white rounded-2xl shadow-xl border border-gray-100 p-3 hidden group-hover:block transition-all opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 duration-150">
+              <a href="#web-hizmetleri" class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-indigo-50/70 transition group/item">
+                <div class="w-8 h-8 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center shrink-0 mt-0.5">
+                  <i data-lucide="layout" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <div class="text-xs font-bold text-gray-900 group-hover/item:text-indigo-600">Tek Sayfa & Kurumsal Web</div>
+                  <div class="text-[11px] text-gray-500">3 günde teslim hızlı vitrin sitesi</div>
+                </div>
+              </a>
+              <a href="#web-hizmetleri" class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-indigo-50/70 transition group/item">
+                <div class="w-8 h-8 rounded-lg bg-purple-100 text-purple-600 flex items-center justify-center shrink-0 mt-0.5">
+                  <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <div class="text-xs font-bold text-gray-900 group-hover/item:text-indigo-600">E-Ticaret & Satış Siteleri</div>
+                  <div class="text-[11px] text-gray-500">PayTR / Kredi kartı ile güvenli ödeme</div>
+                </div>
+              </a>
+              <a href="#seo-hizmetleri" class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-emerald-50/70 transition group/item">
+                <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5">
+                  <i data-lucide="search" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <div class="text-xs font-bold text-gray-900 group-hover/item:text-emerald-700 flex items-center gap-1.5">
+                    <span>Teknik SEO Analizi & Çözüm</span>
+                    <span class="text-[9px] bg-emerald-100 text-emerald-800 font-extrabold px-1.5 py-0.2 rounded">Popüler</span>
+                  </div>
+                  <div class="text-[11px] text-gray-500">Hızlandırma ve Google hata giderme</div>
+                </div>
+              </a>
+              <a href="#seo-hizmetleri" class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-indigo-50/70 transition group/item">
+                <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-indigo-500 to-purple-600 text-white flex items-center justify-center shrink-0 mt-0.5">
+                  <i data-lucide="sparkles" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <div class="text-xs font-bold text-gray-900 group-hover/item:text-indigo-600 flex items-center gap-1.5">
+                    <span>Yapay Zeka SEO Otomasyonu</span>
+                    <span class="text-[9px] bg-indigo-100 text-indigo-700 font-extrabold px-1.5 py-0.2 rounded">Yeni</span>
+                  </div>
+                  <div class="text-[11px] text-gray-500">Otopilot blog & 1. sıraya yükselme</div>
+                </div>
+              </a>
+              <a href="#web-hizmetleri" class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-indigo-50/70 transition group/item">
+                <div class="w-8 h-8 rounded-lg bg-gray-100 text-gray-600 flex items-center justify-center shrink-0 mt-0.5">
+                  <i data-lucide="shield-check" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <div class="text-xs font-bold text-gray-900 group-hover/item:text-indigo-600">Bakım, Hızlandırma & Güvenlik</div>
+                  <div class="text-[11px] text-gray-500">Core Web Vitals 90+ puan garantisi</div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Dropdown 2: Özel Yazılım Çözümleri -->
+          <div class="relative group">
+            <button class="text-sm font-semibold text-gray-700 group-hover:text-indigo-600 px-3 py-2 rounded-xl group-hover:bg-gray-50 flex items-center gap-1 transition">
+              <span>Özel Yazılım</span>
+              <i data-lucide="chevron-down" class="w-4 h-4 text-gray-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform"></i>
+            </button>
+            <div class="absolute top-full left-0 w-80 bg-white rounded-2xl shadow-xl border border-gray-100 p-3 hidden group-hover:block transition-all opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 duration-150">
+              <a href="#yazilimlar" class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-indigo-50/70 transition group/item">
+                <div class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 flex items-center justify-center shrink-0 mt-0.5">
+                  <i data-lucide="boxes" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <div class="text-xs font-bold text-gray-900 group-hover/item:text-indigo-600 flex items-center gap-1.5">
+                    <span>6 Hazır Sektörel Sistem</span>
+                    <span class="text-[9px] bg-green-100 text-green-700 font-extrabold px-1.5 py-0.2 rounded">10.000 ₺</span>
+                  </div>
+                  <div class="text-[11px] text-gray-500">Randevu, Klinik, Muhasebe, CRM, Oto Servis</div>
+                </div>
+              </a>
+              <a href="#ozel-yazilim-detay" class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-indigo-50/70 transition group/item">
+                <div class="w-8 h-8 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center shrink-0 mt-0.5">
+                  <i data-lucide="cpu" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <div class="text-xs font-bold text-gray-900 group-hover/item:text-indigo-600">Sıfırdan Web Panelleri & Portal</div>
+                  <div class="text-[11px] text-gray-500">İşletmenizin işleyişine özel panel</div>
+                </div>
+              </a>
+              <a href="#ozel-yazilim-detay" class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-indigo-50/70 transition group/item">
+                <div class="w-8 h-8 rounded-lg bg-purple-100 text-purple-600 flex items-center justify-center shrink-0 mt-0.5">
+                  <i data-lucide="smartphone" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <div class="text-xs font-bold text-gray-900 group-hover/item:text-indigo-600">Mobil Uygulama (MVP)</div>
+                  <div class="text-[11px] text-gray-500">iOS & Android push bildirimli app</div>
+                </div>
+              </a>
+              <a href="#ozel-yazilim-detay" class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-indigo-50/70 transition group/item">
+                <div class="w-8 h-8 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center shrink-0 mt-0.5">
+                  <i data-lucide="network" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <div class="text-xs font-bold text-gray-900 group-hover/item:text-indigo-600">API & WhatsApp Entegrasyonu</div>
+                  <div class="text-[11px] text-gray-500">Otomatik SMS, WhatsApp ve veri köprüleri</div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Dropdown 3: Sosyal Medya & Reklam -->
+          <div class="relative group">
+            <button class="text-sm font-semibold text-gray-700 group-hover:text-indigo-600 px-3 py-2 rounded-xl group-hover:bg-gray-50 flex items-center gap-1 transition">
+              <span>Sosyal Medya & Reklam</span>
+              <i data-lucide="chevron-down" class="w-4 h-4 text-gray-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform"></i>
+            </button>
+            <div class="absolute top-full left-0 w-80 bg-white rounded-2xl shadow-xl border border-gray-100 p-3 hidden group-hover:block transition-all opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 duration-150">
+              <a href="#sosyal-medya" class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-pink-50/70 transition group/item">
+                <div class="w-8 h-8 rounded-lg bg-pink-100 text-pink-600 flex items-center justify-center shrink-0 mt-0.5">
+                  <i data-lucide="trending-up" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <div class="text-xs font-bold text-gray-900 group-hover/item:text-pink-600">Meta (Instagram/FB) Reklamları</div>
+                  <div class="text-[11px] text-gray-500">Doğrudan WhatsApp'a müşteri çeken reklam</div>
+                </div>
+              </a>
+              <a href="#sosyal-medya" class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-blue-50/70 transition group/item">
+                <div class="w-8 h-8 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center shrink-0 mt-0.5">
+                  <i data-lucide="target" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <div class="text-xs font-bold text-gray-900 group-hover/item:text-blue-600">Google Ads & Arama Reklamları</div>
+                  <div class="text-[11px] text-gray-500">Sektörünüz arandığında ilk sırada çıkın</div>
+                </div>
+              </a>
+              <a href="#sosyal-medya" class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-emerald-50/70 transition group/item">
+                <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
+                  <i data-lucide="map-pin" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <div class="text-xs font-bold text-gray-900 group-hover/item:text-emerald-600">Google Harita & Yerel SEO</div>
+                  <div class="text-[11px] text-gray-500">Haritada zirveye çıkış ve yorum sistemi</div>
+                </div>
+              </a>
+              <a href="#sosyal-medya" class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-indigo-50/70 transition group/item">
+                <div class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 flex items-center justify-center shrink-0 mt-0.5">
+                  <i data-lucide="instagram" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <div class="text-xs font-bold text-gray-900 group-hover/item:text-indigo-600">Sosyal Medya İçerik Yönetimi</div>
+                  <div class="text-[11px] text-gray-500">Düzenli post, carousel ve Reels üretimi</div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <a href="#derdini-anlat" class="text-sm font-semibold text-gray-600 hover:text-indigo-600 px-3 py-2 rounded-xl transition">Çözümler</a>
+          <a href="#surec" class="text-sm font-semibold text-gray-600 hover:text-indigo-600 px-3 py-2 rounded-xl transition">Nasıl Çalışıyoruz?</a>
+          <a href="#sss" class="text-sm font-semibold text-gray-600 hover:text-indigo-600 px-3 py-2 rounded-xl transition">SSS</a>
         </nav>
 
         <!-- CTA -->
         <div class="hidden md:flex items-center gap-3">
-          <a href="https://wa.me/905515149511?text=Merhaba,%20web%20sitesi%20hakkında%20bilgi%20almak%20istiyorum." target="_blank" class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold text-sm px-5 py-2.5 rounded-xl shadow-md shadow-green-100 transition">
+          <a href="https://wa.me/905515149511?text=Merhaba,%20web%20sitesi%20ve%20dijital%20hizmetleriniz%20hakkında%20bilgi%20almak%20istiyorum." target="_blank" class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold text-sm px-5 py-2.5 rounded-xl shadow-md shadow-green-100 transition">
             <i data-lucide="message-circle" class="w-4 h-4"></i>
-            WhatsApp'tan Yaz
+            <span>WhatsApp'tan Yaz</span>
           </a>
         </div>
 
         <!-- Mobile Menu Button -->
-        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100">
+        <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100">
           <i data-lucide="menu" class="w-6 h-6"></i>
         </button>
       </div>
 
       <!-- Mobile Dropdown -->
-      <div id="mobile-menu" class="hidden md:hidden border-t border-gray-100 py-4 space-y-2">
-        <a href="#fiyatlar" class="block px-3 py-2 text-base font-bold text-indigo-600 hover:bg-gray-50 rounded-lg">Fiyatlar</a>
+      <div id="mobile-menu" class="hidden lg:hidden border-t border-gray-100 py-4 space-y-2">
+        <a href="#fiyatlar" class="block px-3 py-2 text-base font-bold text-indigo-600 hover:bg-gray-50 rounded-lg">Fiyat Listesi</a>
+        <a href="#web-hizmetleri" class="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-lg">Web Sitesi Hizmetleri</a>
+        <a href="#seo-hizmetleri" class="block px-3 py-2 text-base font-medium text-emerald-700 hover:bg-gray-50 rounded-lg">SEO & Yapay Zeka Otomasyonu</a>
+        <a href="#yazilimlar" class="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-lg">Özel Yazılımlar & Hazır Sistemler</a>
+        <a href="#sosyal-medya" class="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-lg">Sosyal Medya & Reklam</a>
         <a href="#derdini-anlat" class="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-lg">Çözümler</a>
-        <a href="#hizmetler" class="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-lg">Hizmetler</a>
-        <a href="#yazilimlar" class="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-lg">Yazılımlar</a>
         <a href="#surec" class="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-lg">Nasıl Çalışıyoruz?</a>
         <a href="#sss" class="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-lg">SSS</a>
         <a href="https://wa.me/905515149511?text=Merhaba,%20web%20sitesi%20hakkında%20bilgi%20almak%20istiyorum." target="_blank" class="block text-center mt-3 bg-green-500 text-white font-bold py-3 rounded-xl shadow">
@@ -135,7 +296,7 @@
   </header>
 
   <!-- ================= HERO WITH DUAL DEVICE MOCKUPS ================= -->
-  <section class="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden bg-gradient-to-b from-indigo-50/70 via-white to-white bg-grid-pattern">
+  <section class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-gradient-to-b from-indigo-50/70 via-white to-white bg-grid-pattern">
     
     <!-- Parlama Orb Efektleri -->
     <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-indigo-200/40 rounded-full blur-[120px] pointer-events-none"></div>
@@ -157,157 +318,101 @@
           <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-800">3 günde teslim, şeffaf fiyat.</span>
         </h1>
         <p class="text-lg sm:text-xl text-gray-600 leading-relaxed mb-8 max-w-2xl mx-auto font-medium">
-          Web tasarımı, mobil uygulama, hazır yazılım sistemleri ve Meta reklamları. 
-          Aracı yok, bekletmek yok; doğrudan WhatsApp üzerinden hızlı ve kesintisiz iletişim.
+          Web tasarımı, hazır yazılım sistemleri, yapay zeka SEO otomasyonu ve Meta reklamları. Müşterinizi artıran anahtar teslim dijital ajans.
         </p>
 
-        <!-- Güven Rozetleri -->
-        <div class="flex flex-wrap justify-center gap-3 sm:gap-4 mb-10 text-xs sm:text-sm text-gray-700 font-semibold">
-          <span class="flex items-center gap-1.5 bg-white border border-gray-200 px-3.5 py-1.5 rounded-full shadow-sm">
-            <i data-lucide="shield-check" class="w-4 h-4 text-green-500"></i> Sabit Fiyat, Sürpriz Masraf Yok
-          </span>
-          <span class="flex items-center gap-1.5 bg-white border border-gray-200 px-3.5 py-1.5 rounded-full shadow-sm">
-            <i data-lucide="headphones" class="w-4 h-4 text-green-500"></i> 1 Ay Ücretsiz Teknik Destek
-          </span>
-          <span class="flex items-center gap-1.5 bg-white border border-gray-200 px-3.5 py-1.5 rounded-full shadow-sm">
-            <i data-lucide="key" class="w-4 h-4 text-green-500"></i> Kaynak Kodlar Size Ait
-          </span>
-        </div>
-
-        <!-- Butonlar -->
-        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <a href="https://wa.me/905515149511?text=Merhaba,%20web%20sitesi%20yaptırmak%20istiyorum.%20Fiyat%20ve%20detayları%20öğrenebilir%20miyim?" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-green-500 hover:bg-green-600 text-white font-extrabold text-base px-8 py-4 rounded-2xl shadow-xl shadow-green-100 transition transform hover:-translate-y-0.5">
+        <!-- CTA Butonları -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
+          <a href="https://wa.me/905515149511?text=Merhaba,%20web%20sitesi%20yaptırmak%20istiyorum." target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-green-500 hover:bg-green-600 text-white font-extrabold text-base px-8 py-4 rounded-2xl shadow-xl shadow-green-100 transition transform hover:-translate-y-0.5">
             <i data-lucide="message-circle" class="w-5 h-5"></i>
-            WhatsApp'tan Ücretsiz Teklif Al
+            WhatsApp'tan Hemen Yazın
           </a>
-          <a href="#fiyatlar" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-50 border border-gray-200 text-gray-800 font-bold text-base px-8 py-4 rounded-2xl shadow-sm transition">
+          <a href="#fiyatlar" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white border border-gray-200 hover:border-indigo-300 text-gray-800 font-bold text-base px-8 py-4 rounded-2xl shadow-sm hover:bg-gray-50 transition">
             Fiyat Listesini İncele
-            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            <i data-lucide="arrow-down" class="w-4 h-4 text-gray-400"></i>
           </a>
         </div>
       </div>
 
-      <!-- ================= CANLI MOCKUP ARAYÜZ (DESKTOP + MOBILE) ================= -->
-      <div class="mt-16 max-w-5xl mx-auto relative">
+      <!-- ÇİFT CİHAZ MOCKUP (Masaüstü Laptop + Mobil Telefon) -->
+      <div class="relative max-w-5xl mx-auto mt-6">
         
-        <!-- Yüzen Rozet 1: Google Hız Skoru -->
-        <div class="absolute -top-6 -left-4 sm:left-4 z-20 bg-white/95 backdrop-blur-md border border-gray-200 px-4 py-2.5 rounded-2xl shadow-xl flex items-center gap-3">
-          <div class="w-10 h-10 bg-green-50 text-green-600 rounded-xl flex items-center justify-center font-black text-sm border border-green-200">
-            100
-          </div>
-          <div>
-            <div class="text-xs font-bold text-gray-900">Google Hız Skoru</div>
-            <div class="text-[10px] text-green-600 font-semibold">Maksimum Mobil Performans</div>
-          </div>
-        </div>
-
-        <!-- Yüzen Rozet 2: WhatsApp Canlı Sipariş -->
-        <div class="absolute -bottom-6 -right-2 sm:right-6 z-20 bg-white/95 backdrop-blur-md border border-gray-200 px-4 py-2.5 rounded-2xl shadow-xl flex items-center gap-3">
-          <div class="w-10 h-10 bg-green-500 text-white rounded-xl flex items-center justify-center">
-            <i data-lucide="message-circle" class="w-5 h-5"></i>
-          </div>
-          <div>
-            <div class="text-xs font-bold text-gray-900">Yeni Müşteri Mesajı</div>
-            <div class="text-[10px] text-gray-500 font-medium">"Web sitesi için teklif alabilir miyim?"</div>
-          </div>
-        </div>
-
-        <!-- Ana Tarayıcı Mockup'ı -->
-        <div class="bg-gray-900 rounded-3xl p-3 sm:p-4 shadow-2xl border border-gray-800">
-          
-          <!-- Browser Header -->
-          <div class="flex items-center justify-between px-3 py-2 bg-gray-800/80 rounded-t-2xl border-b border-gray-700/60 mb-2">
-            <div class="flex items-center gap-2">
-              <div class="w-3 h-3 rounded-full bg-red-500"></div>
-              <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-              <div class="w-3 h-3 rounded-full bg-green-500"></div>
+        <!-- Laptop / Masaüstü Mockup -->
+        <div class="bg-gray-900 rounded-2xl sm:rounded-3xl p-2 sm:p-4 shadow-2xl border border-gray-800 relative z-10 max-w-4xl mx-auto">
+          <!-- Tarayıcı Üst Barı -->
+          <div class="flex items-center justify-between px-3 py-2 border-b border-gray-800 mb-2 sm:mb-4">
+            <div class="flex items-center gap-1.5 sm:gap-2">
+              <span class="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-red-500 inline-block"></span>
+              <span class="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-yellow-500 inline-block"></span>
+              <span class="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-green-500 inline-block"></span>
             </div>
-            <div class="bg-gray-900/90 text-gray-300 text-xs px-6 py-1.5 rounded-lg border border-gray-700 font-mono flex items-center gap-2">
-              <i data-lucide="lock" class="w-3 h-3 text-green-400"></i>
-              https://sizin-markaniz.com
+            <div class="bg-gray-800 text-gray-400 text-[10px] sm:text-xs font-mono px-3 sm:px-6 py-1 rounded-full flex items-center gap-2 max-w-[200px] sm:max-w-xs truncate">
+              <i data-lucide="lock" class="w-3 h-3 text-green-400 shrink-0"></i>
+              <span class="truncate">https://bastetyazilim.com</span>
             </div>
-            <div class="flex gap-2 text-gray-400 text-xs">
-              <i data-lucide="shield" class="w-4 h-4 text-indigo-400"></i>
-            </div>
+            <div class="text-gray-500 text-xs hidden sm:block font-mono">99/100 Hız</div>
           </div>
 
-          <!-- Tarayıcı İçi Gerçek Site Önizlemesi -->
-          <div class="bg-slate-950 rounded-b-2xl p-6 sm:p-10 border border-gray-800/50 relative overflow-hidden">
-            
-            <!-- Navbar Mockup -->
-            <div class="flex items-center justify-between pb-6 border-b border-gray-800">
-              <div class="flex items-center gap-2">
-                <div class="w-7 h-7 bg-indigo-500 rounded-lg flex items-center justify-center text-white text-xs font-black">B</div>
-                <span class="text-white font-bold text-sm">Şirketiniz</span>
+          <!-- Canlı Arayüz Önizleme İçeriği (Dashboard) -->
+          <div class="bg-slate-950 rounded-xl sm:rounded-2xl p-4 sm:p-6 text-white overflow-hidden relative">
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 mb-4">
+              <div class="bg-slate-900/90 border border-slate-800 p-3 sm:p-4 rounded-xl">
+                <div class="text-[10px] sm:text-xs text-gray-400 font-medium mb-1">Aylık Ziyaretçi</div>
+                <div class="text-lg sm:text-2xl font-black text-white">+14.250</div>
+                <div class="text-[10px] text-green-400 mt-1 flex items-center gap-1">▲ %34 Artış</div>
               </div>
-              <div class="hidden sm:flex gap-4 text-xs text-gray-400">
-                <span class="text-white">Anasayfa</span>
-                <span>Hakkımızda</span>
-                <span>Hizmetler</span>
-                <span>İletişim</span>
+              <div class="bg-slate-900/90 border border-slate-800 p-3 sm:p-4 rounded-xl">
+                <div class="text-[10px] sm:text-xs text-gray-400 font-medium mb-1">Yeni Talepler</div>
+                <div class="text-lg sm:text-2xl font-black text-indigo-400">128 Adet</div>
+                <div class="text-[10px] text-gray-400 mt-1">WhatsApp & Form</div>
               </div>
-              <div class="bg-indigo-600 text-white text-xs font-bold px-3 py-1.5 rounded-lg">
-                Hemen Ulaşın
+              <div class="bg-slate-900/90 border border-slate-800 p-3 sm:p-4 rounded-xl col-span-2 sm:col-span-1">
+                <div class="text-[10px] sm:text-xs text-gray-400 font-medium mb-1">Google Sıralama</div>
+                <div class="text-lg sm:text-2xl font-black text-yellow-400">1. Sayfa</div>
+                <div class="text-[10px] text-gray-400 mt-1">SEO & Otopilot</div>
               </div>
             </div>
 
-            <!-- Hero İçerik Mockup -->
-            <div class="py-10 sm:py-14 text-center max-w-xl mx-auto">
-              <span class="bg-indigo-900/60 text-indigo-300 border border-indigo-700/50 text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider inline-block mb-3">
-                Profesyonel Kurumsal Çözümler
+            <!-- Mini Çizgi Grafik Görsel İllüstrasyonu -->
+            <div class="bg-slate-900/60 border border-slate-800/80 rounded-xl p-3 sm:p-4 flex items-center justify-between">
+              <div class="space-y-1">
+                <div class="text-xs sm:text-sm font-bold text-gray-200">Hızlı & Dönüşüm Odaklı Altyapı</div>
+                <div class="text-[10px] sm:text-xs text-gray-500">Google Core Web Vitals tam puan ile anında yüklenen sayfalar</div>
+              </div>
+              <span class="bg-green-500/10 text-green-400 text-xs font-bold px-3 py-1 rounded-full border border-green-500/20">
+                ⚡ 0.4s Açılış
               </span>
-              <h2 class="text-2xl sm:text-4xl font-extrabold text-white mb-3">
-                Müşterilerinize Güven Veren Modern Web Siteleri
-              </h2>
-              <p class="text-gray-400 text-xs sm:text-sm mb-6">
-                Yüksek hızlı yükleme, kusursuz mobil uyumluluk ve doğrudan WhatsApp'tan sipariş alma kolaylığı.
-              </p>
-              
-              <div class="flex justify-center gap-3">
-                <div class="bg-green-500 text-white text-xs font-bold px-4 py-2 rounded-xl flex items-center gap-1.5">
-                  <i data-lucide="phone" class="w-3.5 h-3.5"></i> WhatsApp İle Ulaş
-                </div>
-                <div class="bg-gray-800 text-gray-300 text-xs font-bold px-4 py-2 rounded-xl border border-gray-700">
-                  Referanslarımız
-                </div>
-              </div>
             </div>
-
-            <!-- Mini Dashboard İstatistikleri -->
-            <div class="grid grid-cols-3 gap-3 pt-6 border-t border-gray-800/80 text-left">
-              <div class="bg-gray-900/80 p-3 rounded-xl border border-gray-800">
-                <div class="text-[10px] text-gray-400">Aylık Ziyaretçi</div>
-                <div class="text-base sm:text-lg font-black text-white">+14.250</div>
-                <div class="text-[10px] text-green-400 font-semibold">▲ %34 Artış</div>
-              </div>
-              <div class="bg-gray-900/80 p-3 rounded-xl border border-gray-800">
-                <div class="text-[10px] text-gray-400">Yeni Talepler</div>
-                <div class="text-base sm:text-lg font-black text-indigo-400">128 Adet</div>
-                <div class="text-[10px] text-indigo-300 font-semibold">WhatsApp & Form</div>
-              </div>
-              <div class="bg-gray-900/80 p-3 rounded-xl border border-gray-800">
-                <div class="text-[10px] text-gray-400">Google Sıralama</div>
-                <div class="text-base sm:text-lg font-black text-yellow-400">1. Sayfa</div>
-                <div class="text-[10px] text-gray-400 font-semibold">Yerel Arama</div>
-              </div>
-            </div>
-
           </div>
+        </div>
 
+        <!-- Akıllı Telefon (Mobil Cihaz) Floating Mockup -->
+        <div class="absolute -bottom-8 right-2 sm:right-6 lg:-right-6 z-20 w-44 sm:w-56 bg-gray-900 p-2 rounded-[28px] sm:rounded-[36px] shadow-2xl border-2 sm:border-4 border-gray-800 hidden sm:block transform hover:scale-105 transition">
+          <div class="bg-slate-950 rounded-[20px] sm:rounded-[28px] p-3 text-white overflow-hidden text-center">
+            <div class="w-12 h-3.5 bg-gray-800 rounded-full mx-auto mb-3"></div>
+            <div class="text-[11px] font-bold text-gray-200 mb-1">Müşteri WhatsApp Bildirimi</div>
+            <div class="bg-green-500/10 border border-green-500/30 rounded-xl p-2.5 text-left mb-2">
+              <div class="text-[10px] text-green-400 font-bold flex items-center gap-1">
+                <i data-lucide="message-circle" class="w-3 h-3"></i> Yeni Müşteri
+              </div>
+              <div class="text-[9px] text-gray-300 mt-0.5">"Web sitemiz için hemen başlamak istiyoruz!"</div>
+            </div>
+            <div class="w-full bg-green-500 text-white font-bold text-[10px] py-1.5 rounded-lg">
+              Otomatik Yanıt Gönderildi
+            </div>
+          </div>
         </div>
 
       </div>
 
     </div>
-  </section>
 
-  <!-- ================= STATS ================= -->
-  <section class="py-12 bg-gray-950 text-white border-y border-gray-800">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+    <!-- İstatistik Şeridi -->
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 mt-16 sm:mt-24">
+      <div class="bg-gray-900 rounded-3xl p-6 sm:p-8 text-white grid grid-cols-2 md:grid-cols-4 gap-6 text-center shadow-xl">
         <div>
           <div class="text-3xl sm:text-4xl font-black text-indigo-400 mb-1">3.450 TL</div>
-          <div class="text-xs sm:text-sm text-gray-400 font-medium">Başlangıç Web Sitesi Fiyatı</div>
+          <div class="text-xs sm:text-sm text-gray-400 font-medium">Web Sitesi Fiyatı</div>
         </div>
         <div>
           <div class="text-3xl sm:text-4xl font-black text-indigo-400 mb-1">3 Gün</div>
@@ -482,7 +587,6 @@
         
         <!-- Sohbet Kartı 1: Kuaför -->
         <div class="bg-[#efeae2] border border-gray-300 rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition">
-          <!-- WhatsApp Chat Header -->
           <div class="bg-[#075e54] text-white px-4 py-3 flex items-center justify-between">
             <div class="flex items-center gap-2.5">
               <div class="w-9 h-9 rounded-full bg-amber-500 flex items-center justify-center font-bold text-sm">
@@ -496,15 +600,12 @@
             <i data-lucide="phone" class="w-4 h-4 text-green-200"></i>
           </div>
 
-          <!-- Mesaj Akışı -->
           <div class="p-4 space-y-3">
-            <!-- Gelen Mesaj -->
             <div class="relative bg-white p-3 rounded-2xl rounded-tl-none shadow-sm text-xs text-gray-800 bubble-incoming max-w-[90%]">
               “Randevuları WhatsApp'tan alıyorum ama gelmeyen çok oluyor, kasa ve takvim defterde karışıyor.”
               <div class="text-[9px] text-gray-400 text-right mt-1">11:42 ✓✓</div>
             </div>
 
-            <!-- Bizim Çözümümüz (Giden Mesaj) -->
             <div class="relative bg-[#dcf8c6] p-3 rounded-2xl rounded-tr-none shadow-sm text-xs text-gray-900 bubble-outgoing max-w-[90%] ml-auto">
               “Otomatik SMS/WhatsApp hatırlatmalı **Randevu Sistemi** kuralım, kasanız da cebinizde olsun! 🚀”
               <div class="text-[9px] text-green-700 text-right mt-1">11:43 ✓✓</div>
@@ -518,15 +619,15 @@
           </div>
         </div>
 
-        <!-- Sohbet Kartı 2: Küçük İşletme -->
+        <!-- Sohbet Kartı 2: Butik / Mağaza -->
         <div class="bg-[#efeae2] border border-gray-300 rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition">
           <div class="bg-[#075e54] text-white px-4 py-3 flex items-center justify-between">
             <div class="flex items-center gap-2.5">
-              <div class="w-9 h-9 rounded-full bg-blue-500 flex items-center justify-center font-bold text-sm">
-                🏢
+              <div class="w-9 h-9 rounded-full bg-pink-500 flex items-center justify-center font-bold text-sm">
+                👗
               </div>
               <div>
-                <div class="text-xs font-bold leading-tight">Serkan Bey (İşletme)</div>
+                <div class="text-xs font-bold leading-tight">Selin Hanım (Butik)</div>
                 <div class="text-[10px] text-green-200">çevrimiçi</div>
               </div>
             </div>
@@ -535,18 +636,18 @@
 
           <div class="p-4 space-y-3">
             <div class="relative bg-white p-3 rounded-2xl rounded-tl-none shadow-sm text-xs text-gray-800 bubble-incoming max-w-[90%]">
-              “Web sitemiz yok. Müşteriler güven duysun, Google Haritalar'da bizi ilk sırada bulsun istiyorum.”
-              <div class="text-[9px] text-gray-400 text-right mt-1">13:15 ✓✓</div>
+              “Instagram'dan DM ile sipariş almaktan yoruldum. Kredi kartıyla ödeme alabileceğim sade bir site kaça patlar?”
+              <div class="text-[9px] text-gray-400 text-right mt-1">12:15 ✓✓</div>
             </div>
 
             <div class="relative bg-[#dcf8c6] p-3 rounded-2xl rounded-tr-none shadow-sm text-xs text-gray-900 bubble-outgoing max-w-[90%] ml-auto">
-              “3 günde 3.450 TL'ye anahtar teslim **Kurumsal Web Sitesi** ve Harita kaydınızı yapıyoruz!”
-              <div class="text-[9px] text-green-700 text-right mt-1">13:16 ✓✓</div>
+              “9.950 TL'ye PayTR kartla ödemeli, kargo ve stok takipli **E-Ticaret Sitenizi** 10 günde teslim edelim.”
+              <div class="text-[9px] text-green-700 text-right mt-1">12:16 ✓✓</div>
             </div>
           </div>
 
           <div class="p-3 bg-white/70 border-t border-gray-200">
-            <a href="https://wa.me/905515149511?text=Küçük%20bir%20işletmem%20var,%20web%20sitem%20yok,%20müşteriler%20bana%20güvensin%20ve%20Google'da%20bulsun%20istiyorum." target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-[#25d366] hover:bg-green-600 text-white font-bold text-xs py-2.5 rounded-xl transition">
+            <a href="https://wa.me/905515149511?text=Instagram'dan%20satış%20yapıyorum,%20kredi%20kartlı%20e-ticaret%20sitesi%20istiyorum." target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-[#25d366] hover:bg-green-600 text-white font-bold text-xs py-2.5 rounded-xl transition">
               <i data-lucide="message-circle" class="w-4 h-4"></i> Bu Çözümü Konuşalım
             </a>
           </div>
@@ -569,7 +670,7 @@
 
           <div class="p-4 space-y-3">
             <div class="relative bg-white p-3 rounded-2xl rounded-tl-none shadow-sm text-xs text-gray-800 bubble-incoming max-w-[90%]">
-              “Hastaların tedavi seansları, randevuları ve taksitli ödemeleri defterde karışıyor.”
+              “Hastaların tedavi seansları, randevuları ve taksitli ödemeleri karışıyor; karmaşık programlar da istemiyorum.”
               <div class="text-[9px] text-gray-400 text-right mt-1">14:02 ✓✓</div>
             </div>
 
@@ -614,21 +715,21 @@
           </div>
 
           <div class="p-3 bg-white/70 border-t border-gray-200">
-            <a href="https://wa.me/905515149511?text=İnşaat%20malzemesi%20veya%20toptan%20ürün%20satıyorum,%20teklifleri%20Excel'de%20yapıyorum,%20borç%20alacak%20takip%20edemiyorum." target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-[#25d366] hover:bg-green-600 text-white font-bold text-xs py-2.5 rounded-xl transition">
+            <a href="https://wa.me/905515149511?text=Toptancıyız,%20teklifler%20ve%20müşteri%20alacakları%20karışıyor,%20ön%20muhasebe%20paneli%20lazım." target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-[#25d366] hover:bg-green-600 text-white font-bold text-xs py-2.5 rounded-xl transition">
               <i data-lucide="message-circle" class="w-4 h-4"></i> Bu Çözümü Konuşalım
             </a>
           </div>
         </div>
 
-        <!-- Sohbet Kartı 5: Butik / E-Ticaret -->
+        <!-- Sohbet Kartı 5: Hizmet Esnafı -->
         <div class="bg-[#efeae2] border border-gray-300 rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition">
           <div class="bg-[#075e54] text-white px-4 py-3 flex items-center justify-between">
             <div class="flex items-center gap-2.5">
-              <div class="w-9 h-9 rounded-full bg-pink-500 flex items-center justify-center font-bold text-sm">
-                👗
+              <div class="w-9 h-9 rounded-full bg-blue-500 flex items-center justify-center font-bold text-sm">
+                🔧
               </div>
               <div>
-                <div class="text-xs font-bold leading-tight">Derya Hanım (Butik)</div>
+                <div class="text-xs font-bold leading-tight">Murat Usta (Tesisat)</div>
                 <div class="text-[10px] text-green-200">çevrimiçi</div>
               </div>
             </div>
@@ -637,18 +738,18 @@
 
           <div class="p-4 space-y-3">
             <div class="relative bg-white p-3 rounded-2xl rounded-tl-none shadow-sm text-xs text-gray-800 bubble-incoming max-w-[90%]">
-              “Pazaryeri komisyonlarından sıkıldım. Kendi sitemden kredi kartıyla doğrudan satış yapmak istiyorum.”
-              <div class="text-[9px] text-gray-400 text-right mt-1">16:45 ✓✓</div>
+              “Google'da arayan beni bulsun, arama butonuna basıp doğrudan beni arasın istiyorum. Bütçem kısıtlı.”
+              <div class="text-[9px] text-gray-400 text-right mt-1">16:40 ✓✓</div>
             </div>
 
             <div class="relative bg-[#dcf8c6] p-3 rounded-2xl rounded-tr-none shadow-sm text-xs text-gray-900 bubble-outgoing max-w-[90%] ml-auto">
-              “İyzico/PayTR sanal poslu, sınırsız ürünlü **E-Ticaret Sitesi** kuralım; komisyonsuz kazanın!”
-              <div class="text-[9px] text-green-700 text-right mt-1">16:46 ✓✓</div>
+              “3.450 TL'lik **Modern Web Sitesi** tam sizin için; 3 günde alan adı dahil kuruyoruz, doğrudan çağrı alın!”
+              <div class="text-[9px] text-green-700 text-right mt-1">16:41 ✓✓</div>
             </div>
           </div>
 
           <div class="p-3 bg-white/70 border-t border-gray-200">
-            <a href="https://wa.me/905515149511?text=Ürünlerimi%20internet%20üzerinden%20satmak%20ve%20kartla%20ödeme%20almak%20istiyorum." target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-[#25d366] hover:bg-green-600 text-white font-bold text-xs py-2.5 rounded-xl transition">
+            <a href="https://wa.me/905515149511?text=Tesisatçıyım,%20Google'da%20arayanların%20beni%20aramasını%20sağlayacak%20hızlı%20bir%20site%20istiyorum." target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-[#25d366] hover:bg-green-600 text-white font-bold text-xs py-2.5 rounded-xl transition">
               <i data-lucide="message-circle" class="w-4 h-4"></i> Bu Çözümü Konuşalım
             </a>
           </div>
@@ -700,188 +801,145 @@
     </div>
   </section>
 
-  <!-- ================= HİZMETLER: MOCKUP & ARAYÜZ GRAFİKLERİYLE ================= -->
-  <section id="hizmetler" class="py-20 bg-white">
+  <!-- ================= 1. KATEGORİ: WEB SİTESİ HİZMETLERİ ================= -->
+  <section id="web-hizmetleri" class="py-20 bg-white border-b border-gray-100">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="text-xs font-extrabold uppercase tracking-wider text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full border border-indigo-100">Hizmetlerimiz</span>
+        <span class="text-xs font-extrabold uppercase tracking-wider text-blue-700 bg-blue-50 px-3 py-1 rounded-full border border-blue-200">1. Kategori</span>
         <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mt-3 mb-4">
-          Büyümeniz için ihtiyacınız olan her şey
+          Web Sitesi Hizmetleri
         </h2>
         <p class="text-gray-600 text-lg">
-          Web sitenizi hazırlayan, yazılımınızı geliştiren ve reklamınızı yöneten aynı kişi. Sorumluluk dağılmaz.
+          İster tek sayfalık hızlı vitrin, ister kurumsal portal veya online mağaza. İşletmenizin dijitaldeki yüzünü en modern teknolojilerle inşa ediyoruz.
         </p>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-8">
+      <div class="grid md:grid-cols-3 gap-6">
         
-        <!-- Hizmet 1: Web Tasarım -->
-        <div class="bg-gray-50 border border-gray-200 rounded-3xl p-6 sm:p-8 hover:border-indigo-400 hover:shadow-xl transition flex flex-col justify-between group">
+        <!-- Kart 1: Tek Sayfa Vitrin -->
+        <div class="bg-gray-50 border border-gray-200 rounded-3xl p-6 hover:border-blue-400 hover:shadow-lg transition flex flex-col justify-between">
           <div>
-            <!-- Mini Görsel Mockup: Web Tasarım -->
-            <div class="bg-white rounded-2xl p-3 border border-gray-200 shadow-sm mb-6 group-hover:border-indigo-300 transition">
-              <div class="flex items-center justify-between pb-2 mb-2 border-b border-gray-100 text-[11px] text-gray-400 font-mono">
-                <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-red-400"></span><span class="w-2 h-2 rounded-full bg-yellow-400"></span><span class="w-2 h-2 rounded-full bg-green-400"></span> modern-web.com</span>
-                <span class="text-green-600 font-bold bg-green-50 px-2 py-0.5 rounded">⚡ 99/100 Hız</span>
-              </div>
-              <div class="bg-indigo-50/50 rounded-xl p-4 text-center">
-                <div class="w-12 h-2 bg-indigo-200 rounded mx-auto mb-2"></div>
-                <div class="w-3/4 h-3 bg-gray-800 rounded mx-auto mb-3"></div>
-                <div class="w-1/2 h-2 bg-gray-400 rounded mx-auto mb-4"></div>
-                <div class="inline-flex gap-2">
-                  <span class="w-16 h-5 bg-indigo-600 rounded-md"></span>
-                  <span class="w-16 h-5 bg-green-500 rounded-md"></span>
-                </div>
-              </div>
+            <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center font-bold mb-4">
+              <i data-lucide="zap" class="w-5 h-5"></i>
             </div>
-
-            <div class="flex items-center justify-between mb-4">
-              <h3 class="text-2xl font-bold text-gray-900">Kurumsal Web Tasarım</h3>
-              <span class="text-xs font-extrabold text-blue-700 bg-blue-50 border border-blue-200 px-3 py-1.5 rounded-full">
-                3.450 TL'den Başlıyor
-              </span>
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="font-bold text-gray-900 text-lg">Hızlı Tek Sayfa Vitrin Sitesi</h3>
+              <span class="text-[11px] font-bold text-blue-700 bg-blue-50 px-2.5 py-0.5 rounded-full">3.450 ₺</span>
             </div>
-            <p class="text-gray-600 text-sm leading-relaxed mb-6">
-              Google'ın Core Web Vitals kriterlerine tam uyumlu, cep telefonunda anında yüklenen, WhatsApp sipariş butonlu kurumsal vitrininiz.
+            <p class="text-xs text-gray-600 leading-relaxed mb-4">
+              Küçük esnaf, ustalar, danışmanlar ve yerel işletmeler için cep telefonunda anında açılan, doğrudan WhatsApp ve arama butonlu vitrin sitesi.
             </p>
-            <ul class="space-y-2.5 mb-8 text-sm text-gray-700">
-              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-500"></i> 3 iş gününde hızlı teslim</li>
-              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-500"></i> Alan adı (.com) + 1 Yıl Hosting dahil</li>
-              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-500"></i> SSL Sertifikası & WhatsApp butonu</li>
-              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-500"></i> 1 ay ücretsiz revizyon ve teknik destek</li>
+            <ul class="space-y-2 mb-6 text-xs text-gray-700">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-green-500"></i> 3 iş gününde teslimat</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-green-500"></i> .com Alan adı + Bulut Barındırma</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-green-500"></i> Google Harita & WhatsApp entegrasyonu</li>
             </ul>
           </div>
-          <a href="https://wa.me/905515149511?text=Web%20tasarım%20hizmeti%20hakkında%20detaylı%20bilgi%20almak%20istiyorum." target="_blank" class="inline-flex items-center justify-between bg-white border border-gray-200 group-hover:border-indigo-600 px-5 py-3 rounded-xl font-bold text-sm text-gray-800 group-hover:text-indigo-600 transition">
-            <span>Web Tasarım Teklifi Al</span>
-            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          <a href="https://wa.me/905515149511?text=Tek%20sayfa%20hızlı%20web%20sitesi%20hakkında%20bilgi%20almak%20istiyorum." target="_blank" class="w-full text-center bg-white border border-gray-200 hover:border-blue-500 text-gray-800 hover:text-blue-600 font-bold text-xs py-2.5 rounded-xl transition">
+            Teklif Al →
           </a>
         </div>
 
-        <!-- Hizmet 2: Özel Web Yazılımı -->
-        <div class="bg-gray-50 border border-gray-200 rounded-3xl p-6 sm:p-8 hover:border-indigo-400 hover:shadow-xl transition flex flex-col justify-between group">
+        <!-- Kart 2: Çok Sayfalı Kurumsal -->
+        <div class="bg-gray-50 border border-gray-200 rounded-3xl p-6 hover:border-indigo-400 hover:shadow-lg transition flex flex-col justify-between">
           <div>
-            <!-- Mini Görsel Mockup: Terminal / Kod & API -->
-            <div class="bg-gray-950 rounded-2xl p-3 border border-gray-800 shadow-sm mb-6 font-mono text-[11px] text-gray-300">
-              <div class="flex items-center justify-between pb-2 mb-2 border-b border-gray-800">
-                <span class="text-indigo-400 font-bold">API & Database Server</span>
-                <span class="text-green-400">● 200 OK</span>
-              </div>
-              <div class="space-y-1 text-[11px]">
-                <div class="text-gray-400"><span class="text-purple-400">GET</span> /api/v1/orders/live <span class="text-green-400">✓ Connected</span></div>
-                <div class="text-gray-400"><span class="text-blue-400">AUTH</span> User: Admin [Role: Superuser]</div>
-                <div class="text-indigo-300">Database: PostgreSQL Sync Complete (14ms)</div>
-              </div>
+            <div class="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center font-bold mb-4">
+              <i data-lucide="building-2" class="w-5 h-5"></i>
             </div>
-
-            <div class="flex items-center justify-between mb-4">
-              <h3 class="text-2xl font-bold text-gray-900">Özel Web Yazılımı</h3>
-              <span class="text-xs font-extrabold text-indigo-700 bg-indigo-50 border border-indigo-200 px-3 py-1.5 rounded-full">
-                6.950 TL'den Başlıyor
-              </span>
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="font-bold text-gray-900 text-lg">Çok Sayfalı Kurumsal Web</h3>
+              <span class="text-[11px] font-bold text-indigo-700 bg-indigo-50 px-2.5 py-0.5 rounded-full">4.950 ₺</span>
             </div>
-            <p class="text-gray-600 text-sm leading-relaxed mb-6">
-              İşletmenizin kendine has işleyişine uygun özel yönetim panelleri, muhasebe modülleri ve operasyon takip yazılımları.
+            <p class="text-xs text-gray-600 leading-relaxed mb-4">
+              Fabrikalar, klinikler, toptancılar ve KOBİ'ler için Hakkımızda, Hizmetler, Projeler, İletişim Formları ve kurumsal e-posta altyapısı.
             </p>
-            <ul class="space-y-2.5 mb-8 text-sm text-gray-700">
-              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-500"></i> İhtiyacınıza göre sıfırdan geliştirme</li>
-              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-500"></i> Kullanıcı ve yetki yönetimi</li>
-              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-500"></i> Tam kaynak kod teslimi (Bağımlılık yok)</li>
-              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-500"></i> Excel'den veri aktarımı desteği</li>
+            <ul class="space-y-2 mb-6 text-xs text-gray-700">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-green-500"></i> info@firmaniz.com kurumsal e-posta</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-green-500"></i> 1 yıl kurumsal yüksek hızlı hosting</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-green-500"></i> İletişim & teklif formları entegrasyonu</li>
             </ul>
           </div>
-          <a href="https://wa.me/905515149511?text=Özel%20yazılım%20ihtiyacım%20var,%20detayları%20konuşabilir%20miyiz?" target="_blank" class="inline-flex items-center justify-between bg-white border border-gray-200 group-hover:border-indigo-600 px-5 py-3 rounded-xl font-bold text-sm text-gray-800 group-hover:text-indigo-600 transition">
-            <span>Özel Yazılım Teklifi Al</span>
-            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          <a href="https://wa.me/905515149511?text=Çok%20sayfalı%20kurumsal%20web%20sitesi%20hakkında%20bilgi%20almak%20istiyorum." target="_blank" class="w-full text-center bg-white border border-gray-200 hover:border-indigo-500 text-gray-800 hover:text-indigo-600 font-bold text-xs py-2.5 rounded-xl transition">
+            Teklif Al →
           </a>
         </div>
 
-        <!-- Hizmet 3: Mobil Uygulama -->
-        <div class="bg-gray-50 border border-gray-200 rounded-3xl p-6 sm:p-8 hover:border-indigo-400 hover:shadow-xl transition flex flex-col justify-between group">
+        <!-- Kart 3: E-Ticaret Sitesi -->
+        <div class="bg-gray-50 border border-gray-200 rounded-3xl p-6 hover:border-purple-400 hover:shadow-lg transition flex flex-col justify-between">
           <div>
-            <!-- Mini Görsel Mockup: Telefon Bildirim Kartı -->
-            <div class="bg-slate-900 rounded-2xl p-3 border border-slate-800 shadow-sm mb-6 text-white text-xs">
-              <div class="flex items-center justify-between pb-2 mb-2 border-b border-slate-800 text-[11px] text-gray-400">
-                <span>📱 iOS & Android App</span>
-                <span class="text-green-400">Push Aktif</span>
-              </div>
-              <div class="bg-slate-800/80 p-2.5 rounded-xl border border-slate-700 flex items-center gap-3">
-                <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white">
-                  <i data-lucide="bell" class="w-4 h-4"></i>
-                </div>
-                <div>
-                  <div class="font-bold text-[11px]">Siparişiniz Yolda!</div>
-                  <div class="text-[10px] text-gray-400">Müşterinize anlık bildirim iletildi.</div>
-                </div>
-              </div>
+            <div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center font-bold mb-4">
+              <i data-lucide="shopping-bag" class="w-5 h-5"></i>
             </div>
-
-            <div class="flex items-center justify-between mb-4">
-              <h3 class="text-2xl font-bold text-gray-900">Mobil Uygulama (MVP)</h3>
-              <span class="text-xs font-extrabold text-purple-700 bg-purple-50 border border-purple-200 px-3 py-1.5 rounded-full">
-                9.950 TL'den Başlıyor
-              </span>
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="font-bold text-gray-900 text-lg">E-Ticaret & Satış Sitesi</h3>
+              <span class="text-[11px] font-bold text-purple-700 bg-purple-50 px-2.5 py-0.5 rounded-full">9.950 ₺</span>
             </div>
-            <p class="text-gray-600 text-sm leading-relaxed mb-6">
-              Müşterilerinizin telefonunda yer alın. Randevu, sipariş veya içerik uygulamalarıyla doğrudan kullanıcılara bildirim gönderin.
+            <p class="text-xs text-gray-600 leading-relaxed mb-4">
+              Ürünlerinizi internetten kredi kartı ile 7/24 satabileceğiniz, sipariş ve kargo takibi yapabileceğiniz profesyonel online mağaza altyapısı.
             </p>
-            <ul class="space-y-2.5 mb-8 text-sm text-gray-700">
-              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-500"></i> Android & iOS desteği</li>
-              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-500"></i> Push (Anlık) bildirim gönderme</li>
-              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-500"></i> Yönetim paneli entegrasyonu</li>
-              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-500"></i> Mağaza yayınlama rehberliği</li>
+            <ul class="space-y-2 mb-6 text-xs text-gray-700">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-green-500"></i> PayTR / İyzico 3D güvenli kartla ödeme</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-green-500"></i> Sınırsız ürün & kategori ekleme</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-green-500"></i> Sipariş, stok & kargo yönetim paneli</li>
             </ul>
           </div>
-          <a href="https://wa.me/905515149511?text=Mobil%20uygulama%20hakkında%20teklif%20almak%20istiyorum." target="_blank" class="inline-flex items-center justify-between bg-white border border-gray-200 group-hover:border-indigo-600 px-5 py-3 rounded-xl font-bold text-sm text-gray-800 group-hover:text-indigo-600 transition">
-            <span>Mobil Uygulama Teklifi Al</span>
-            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          <a href="https://wa.me/905515149511?text=E-ticaret%20sitesi%20hakkında%20detaylı%20bilgi%20almak%20istiyorum." target="_blank" class="w-full text-center bg-white border border-gray-200 hover:border-purple-500 text-gray-800 hover:text-purple-600 font-bold text-xs py-2.5 rounded-xl transition">
+            Teklif Al →
           </a>
         </div>
 
-        <!-- Hizmet 4: Meta Reklamları -->
-        <div class="bg-gray-50 border border-gray-200 rounded-3xl p-6 sm:p-8 hover:border-indigo-400 hover:shadow-xl transition flex flex-col justify-between group">
+        <!-- Kart 4: Landing Page -->
+        <div class="bg-gray-50 border border-gray-200 rounded-3xl p-6 hover:border-amber-400 hover:shadow-lg transition flex flex-col justify-between">
           <div>
-            <!-- Mini Görsel Mockup: Instagram Sponsorlu Reklam -->
-            <div class="bg-white rounded-2xl p-3 border border-gray-200 shadow-sm mb-6 text-xs">
-              <div class="flex items-center justify-between pb-2 mb-2 border-b border-gray-100">
-                <div class="flex items-center gap-2">
-                  <div class="w-5 h-5 rounded-full bg-gradient-to-tr from-yellow-400 to-pink-600"></div>
-                  <div>
-                    <span class="font-bold text-[11px] block text-gray-900">markaniz</span>
-                    <span class="text-[9px] text-gray-400 block -mt-1">Sponsorlu (Meta Ads)</span>
-                  </div>
-                </div>
-                <i data-lucide="more-horizontal" class="w-4 h-4 text-gray-400"></i>
-              </div>
-              <div class="bg-gradient-to-r from-indigo-900 to-purple-900 text-white p-3 rounded-xl text-center mb-2">
-                <span class="text-[11px] font-black block">Yeni Sezon İndirimleri Başladı!</span>
-                <span class="text-[9px] text-indigo-200 block">WhatsApp üzerinden sipariş verin</span>
-              </div>
-              <div class="bg-green-500 text-white font-bold text-[10px] py-1.5 rounded-lg text-center flex items-center justify-center gap-1">
-                <i data-lucide="message-circle" class="w-3 h-3"></i> WhatsApp'tan Mesaj Gönder
-              </div>
+            <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold mb-4">
+              <i data-lucide="mouse-pointer-click" class="w-5 h-5"></i>
             </div>
-
-            <div class="flex items-center justify-between mb-4">
-              <h3 class="text-2xl font-bold text-gray-900">Meta Reklam Yönetimi</h3>
-              <span class="text-xs font-extrabold text-pink-700 bg-pink-50 border border-pink-200 px-3 py-1.5 rounded-full">
-                1.990 TL / Ay
-              </span>
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="font-bold text-gray-900 text-lg">Dönüşüm Odaklı Landing Page</h3>
+              <span class="text-[11px] font-bold text-amber-800 bg-amber-50 px-2.5 py-0.5 rounded-full">Özel Teklif</span>
             </div>
-            <p class="text-gray-600 text-sm leading-relaxed mb-6">
-              Instagram ve Facebook'ta bütçenizi boşa yakmadan, doğrudan WhatsApp'ınıza mesaj atacak sıcak alıcıları hedefleyin.
+            <p class="text-xs text-gray-600 leading-relaxed mb-4">
+              Meta ve Google reklamlarınız için özel kurgulanmış, ziyaretçiyi başka sayfalara dağıtmadan doğrudan arama veya WhatsApp mesajına yönlendiren satış sayfası.
             </p>
-            <ul class="space-y-2.5 mb-8 text-sm text-gray-700">
-              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-500"></i> WhatsApp Lead (Doğrudan mesaj) reklamları</li>
-              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-500"></i> Hedef kitle ve bölge optimizasyonu</li>
-              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-500"></i> Reklam görseli ve metin tasarımı</li>
-              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-green-500"></i> Haftalık şeffaf raporlama</li>
+            <ul class="space-y-2 mb-6 text-xs text-gray-700">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-green-500"></i> A/B testine uygun satış odaklı metinler</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-green-500"></i> Meta Pixel & Google Ads dönüşüm takibi</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-green-500"></i> Yüksek reklam kalite puanı uyumu</li>
             </ul>
           </div>
-          <a href="https://wa.me/905515149511?text=Meta%20reklam%20yönetimi%20hakkında%20konuşmak%20istiyorum." target="_blank" class="inline-flex items-center justify-between bg-white border border-gray-200 group-hover:border-indigo-600 px-5 py-3 rounded-xl font-bold text-sm text-gray-800 group-hover:text-indigo-600 transition">
-            <span>Reklam Yönetimi Teklifi Al</span>
-            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          <a href="https://wa.me/905515149511?text=Landing%20page%20satış%20sayfası%20hakkında%20bilgi%20almak%20istiyorum." target="_blank" class="w-full text-center bg-white border border-gray-200 hover:border-amber-500 text-gray-800 hover:text-amber-700 font-bold text-xs py-2.5 rounded-xl transition">
+            Teklif Al →
           </a>
+        </div>
+
+        <!-- Kart 5: Bakım & Hızlandırma -->
+        <div class="bg-gray-50 border border-gray-200 rounded-3xl p-6 hover:border-slate-400 hover:shadow-lg transition flex flex-col justify-between md:col-span-2">
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-4">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-slate-200 text-slate-800 flex items-center justify-center font-bold shrink-0">
+                <i data-lucide="gauge" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-900 text-lg">Web Sitesi Bakım, Hızlandırma & Güvenlik</h3>
+                <p class="text-xs text-gray-500">Mevcut siteniz yavaş mı açılıyor veya teknik sorunları mı var?</p>
+              </div>
+            </div>
+            <span class="text-xs font-bold text-green-700 bg-green-50 border border-green-200 px-3 py-1 rounded-full w-fit">
+              ⚡ 90+ PageSpeed Skoru
+            </span>
+          </div>
+          <p class="text-xs text-gray-600 leading-relaxed mb-4">
+            Yavaş açılan web siteleri müşteriyi kaçırır ve Google'da geriye düşer. Mevcut sitenizin kodlarını, resimlerini optimize ediyor, SSL ve güvenlik açıklarını kapatıp jet hızına kavuşturuyoruz.
+          </p>
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-3 border-t border-gray-200">
+            <div class="text-[11px] text-gray-500 flex items-center gap-2">
+              <i data-lucide="shield" class="w-4 h-4 text-indigo-600"></i> Haftalık yedekleme, virüs taraması ve anlık kesinti kontrolü dahil.
+            </div>
+            <a href="https://wa.me/905515149511?text=Mevcut%20sitemi%20hızlandırmak%20ve%20bakım%20yaptırmak%20istiyorum." target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs px-5 py-2.5 rounded-xl transition">
+              Ücretsiz Hız Analizi İste →
+            </a>
+          </div>
         </div>
 
       </div>
@@ -889,26 +947,157 @@
     </div>
   </section>
 
-  <!-- ================= HAZIR YAZILIM SİSTEMLERİ: DASHBOARD MOCKUPLARIYLA (10.000 TL TEK SEFERLİK) ================= -->
+  <!-- ================= SEO & YAPAY ZEKA OTOMASYONU BÖLÜMÜ ================= -->
+  <section id="seo-hizmetleri" class="py-20 bg-slate-950 text-white relative overflow-hidden">
+    <!-- Neon Işıltı Arka Planı -->
+    <div class="absolute -top-40 right-0 w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-[140px] pointer-events-none"></div>
+    <div class="absolute -bottom-40 left-0 w-[500px] h-[500px] bg-indigo-500/10 rounded-full blur-[140px] pointer-events-none"></div>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 relative">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-extrabold uppercase tracking-wider text-emerald-400 bg-emerald-950 border border-emerald-800/80 px-3 py-1 rounded-full">
+          Google Sıralama & Büyüme
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-black mt-3 mb-4 tracking-tight">
+          SEO & Yapay Zeka Otomasyonu
+        </h2>
+        <p class="text-gray-400 text-base sm:text-lg">
+          Google'da 1. sayfada çıkmak tesadüf değildir. İki güçlü paketimizle sitenizi Google'ın en sevdiği kaynak haline getiriyoruz.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 items-stretch">
+        
+        <!-- SEO Paket 1: Teknik SEO Analizi & Hata Çözümü -->
+        <div class="bg-slate-900/90 border border-slate-800 rounded-3xl p-8 hover:border-emerald-500/60 hover:shadow-2xl hover:shadow-emerald-950/50 transition flex flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-[11px] font-extrabold uppercase tracking-wider text-emerald-400 bg-emerald-950/80 border border-emerald-800 px-3 py-1 rounded-full">
+                🔍 1. Adım: Sağlık Taraması
+              </span>
+              <span class="text-xs font-bold text-gray-400">Tek Seferlik Proje</span>
+            </div>
+            
+            <h3 class="text-2xl font-black text-white mb-2">Teknik SEO Analizi & Hata Çözümü</h3>
+            <p class="text-gray-400 text-sm leading-relaxed mb-6">
+              Sitenizin Google'da yükselmesini engelleyen tüm teknik prangaları kırıyoruz. Kırık linkler, indeksleme sorunları, hız engelleri ve meta hataları baştan sona temizlenir.
+            </p>
+
+            <div class="space-y-3 mb-8 text-xs text-gray-300">
+              <div class="flex items-start gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                <span><strong>Kapsamlı Site Röntgeni (Audit):</strong> 404 hataları, yönlendirme zincirleri ve eksik sayfaların tespiti.</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                <span><strong>Core Web Vitals & Hız Optimizasyonu:</strong> Google'ın hız kriterlerine tam uyum (90+ yeşil puan).</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                <span><strong>Meta Başlık & Açıklama Düzenlemesi:</strong> Tıklama oranını artıran Title ve Meta Description optimizasyonu.</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                <span><strong>Site Haritası & Robots.txt:</strong> Google botlarının tüm sayfalarınızı eksiksiz tanıması için kurulum.</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+                <span><strong>Google Search Console & Analytics Tescili:</strong> Gelen arama kelimelerini ve ziyaretçi trafiğini anlık izleme.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-6 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+              <div class="text-[10px] text-gray-400">Tek Seferlik Kapsamlı Paket</div>
+              <div class="text-xl font-black text-emerald-400">Sabit & Net Fiyat</div>
+            </div>
+            <a href="https://wa.me/905515149511?text=Teknik%20SEO%20analizi%20ve%20hata%20çözüm%20paketi%20hakkında%20bilgi%20almak%20istiyorum." target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-black text-xs px-6 py-3 rounded-xl transition">
+              <i data-lucide="message-circle" class="w-4 h-4"></i> Ücretsiz Ön İnceleme İste
+            </a>
+          </div>
+        </div>
+
+        <!-- SEO Paket 2: Yapay Zeka SEO Otomasyonu -->
+        <div class="bg-gradient-to-b from-indigo-950/80 to-slate-900/90 border-2 border-indigo-500/60 rounded-3xl p-8 shadow-2xl shadow-indigo-950/60 flex flex-col justify-between relative group">
+          <div class="absolute -top-3 left-8 bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-black text-[10px] px-3.5 py-1 rounded-full uppercase tracking-wider shadow-lg">
+            ⭐ Otopilot Büyüme Modeli
+          </div>
+
+          <div>
+            <div class="flex items-center justify-between mb-4 mt-1">
+              <span class="text-[11px] font-extrabold uppercase tracking-wider text-indigo-300 bg-indigo-900/70 border border-indigo-700 px-3 py-1 rounded-full">
+                🤖 2. Adım: Sürekli Yükseliş
+              </span>
+              <span class="text-xs font-bold text-indigo-200">Aylık Otopilot Sistem</span>
+            </div>
+            
+            <h3 class="text-2xl font-black text-white mb-2">Yapay Zeka Destekli Blog & Sıralama Otomasyonu</h3>
+            <p class="text-indigo-200/90 text-sm leading-relaxed mb-6">
+              Siz günlük işlerinizle ilgilenin; yapay zeka motorumuz her hafta sektörünüze özel Google uyumlu blog içerikleri üretip sitenizde otomatik yayınlasın, rakiplerinizi geride bırakın.
+            </p>
+
+            <div class="space-y-3 mb-8 text-xs text-gray-200">
+              <div class="flex items-start gap-2.5">
+                <i data-lucide="sparkles" class="w-4 h-4 text-indigo-400 shrink-0 mt-0.5"></i>
+                <span><strong>Sektörel Kelime Radarı:</strong> Müşterilerinizin Google'da tam olarak arattığı sıcak soru ve kelimelerin tespiti.</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <i data-lucide="sparkles" class="w-4 h-4 text-indigo-400 shrink-0 mt-0.5"></i>
+                <span><strong>Haftalık Otomatik Özgün Yazı:</strong> %100 özgün, intihalsiz, Google SEO algoritmalarına birebir uyumlu blog makaleleri.</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <i data-lucide="sparkles" class="w-4 h-4 text-indigo-400 shrink-0 mt-0.5"></i>
+                <span><strong>Görsel & Başlık Optimizasyonu:</strong> Yazılara uygun lisanslı kapak görselleri ve dikkat çeken başlık kurgusu.</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <i data-lucide="sparkles" class="w-4 h-4 text-indigo-400 shrink-0 mt-0.5"></i>
+                <span><strong>İç Satış Linkleri (Conversion Links):</strong> Blogları okuyan ziyaretçiyi doğrudan WhatsApp veya teklif formuna yönlendirme.</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <i data-lucide="sparkles" class="w-4 h-4 text-indigo-400 shrink-0 mt-0.5"></i>
+                <span><strong>Aylık Şeffaf Sıralama Raporu:</strong> Hangi kelimelerde kaçıncı sıraya yükseldiğinizi gösteren grafik raporu.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-6 border-t border-indigo-900/80 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+              <div class="text-[10px] text-indigo-300">Aylık Otomatik Büyüme</div>
+              <div class="text-xl font-black text-white">Yatırımınızın Karşılığı</div>
+            </div>
+            <a href="https://wa.me/905515149511?text=Yapay%20zeka%20destekli%20otopilot%20SEO%20otomasyonu%20hakkında%20bilgi%20almak%20istiyorum." target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-indigo-50 text-indigo-900 font-black text-xs px-6 py-3 rounded-xl shadow-lg transition">
+              <i data-lucide="message-circle" class="w-4 h-4 text-green-600"></i> Otopilot SEO'yu Konuşalım
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= 2. KATEGORİ: ÖZEL YAZILIM & HAZIR SİSTEMLER ================= -->
   <section id="yazilimlar" class="py-20 bg-gray-50 border-t border-gray-200">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="text-xs font-extrabold uppercase tracking-wider text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full border border-indigo-100">Hazır Sistemler</span>
+        <span class="text-xs font-extrabold uppercase tracking-wider text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full border border-indigo-100">2. Kategori</span>
         <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mt-3 mb-4">
-          Aylarca beklemeyin: Kurulmaya hazır sistemler
+          Özel Yazılım Çözümleri & Hazır Sistemler
         </h2>
         <p class="text-gray-600 text-lg">
-          Aylık kira veya gizli abonelik ücreti yok. Tüm sistemler için sabit <strong class="text-indigo-600 font-extrabold">10.000 TL Tek Seferlik Ödeme</strong> ile sınırsız ömür boyu kullanım.
+          Aylarca beklemeden, aylık kira ödemeden; sabit <strong class="text-indigo-600 font-extrabold">10.000 TL Tek Seferlik Ödeme</strong> ile sınırsız kullanabileceğiniz hazır yönetim panelleri ve işletmenize özel web yazılımları.
         </p>
       </div>
 
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+      <!-- 6 Hazır Sistem Grid -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
         
         <!-- Ürün 1: Randevu -->
         <div onclick="openSystemModal('randevu')" class="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm flex flex-col justify-between hover:border-indigo-400 hover:shadow-xl transition cursor-pointer group">
           <div>
-            <!-- Mini Takvim Mockup -->
             <div class="bg-indigo-50/60 p-3 rounded-2xl border border-indigo-100 mb-4 text-[11px] group-hover:border-indigo-200 transition">
               <div class="flex items-center justify-between font-bold text-gray-700 mb-2 pb-1 border-b border-indigo-200/50">
                 <span>Bugün Randevuları</span>
@@ -945,7 +1134,6 @@
         <!-- Ürün 2: Klinik -->
         <div onclick="openSystemModal('klinik')" class="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm flex flex-col justify-between hover:border-indigo-400 hover:shadow-xl transition cursor-pointer group">
           <div>
-            <!-- Mini Hasta Kartı Mockup -->
             <div class="bg-red-50/60 p-3 rounded-2xl border border-red-100 mb-4 text-[11px] group-hover:border-red-200 transition">
               <div class="flex items-center justify-between font-bold text-gray-700 mb-2 pb-1 border-b border-red-200/50">
                 <span>Hasta Dosyası #1042</span>
@@ -982,7 +1170,6 @@
         <!-- Ürün 3: Ön Muhasebe -->
         <div onclick="openSystemModal('muhasebe')" class="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm flex flex-col justify-between hover:border-indigo-400 hover:shadow-xl transition cursor-pointer group">
           <div>
-            <!-- Mini Muhasebe Mockup -->
             <div class="bg-amber-50/60 p-3 rounded-2xl border border-amber-100 mb-4 text-[11px] group-hover:border-amber-200 transition">
               <div class="flex items-center justify-between font-bold text-gray-700 mb-2 pb-1 border-b border-amber-200/50">
                 <span>Ekim Ayı Kasa Durumu</span>
@@ -1019,7 +1206,6 @@
         <!-- Ürün 4: CRM -->
         <div onclick="openSystemModal('crm')" class="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm flex flex-col justify-between hover:border-indigo-400 hover:shadow-xl transition cursor-pointer group">
           <div>
-            <!-- Mini CRM Kanban Mockup -->
             <div class="bg-blue-50/60 p-3 rounded-2xl border border-blue-100 mb-4 text-[11px] group-hover:border-blue-200 transition">
               <div class="flex items-center justify-between font-bold text-gray-700 mb-2 pb-1 border-b border-blue-200/50">
                 <span>Satış Hattı (Pipeline)</span>
@@ -1056,7 +1242,6 @@
         <!-- Ürün 5: Oto Servis -->
         <div onclick="openSystemModal('otoservis')" class="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm flex flex-col justify-between hover:border-indigo-400 hover:shadow-xl transition cursor-pointer group">
           <div>
-            <!-- Mini Servis İş Emri Mockup -->
             <div class="bg-gray-100/80 p-3 rounded-2xl border border-gray-200 mb-4 text-[11px] group-hover:border-gray-300 transition">
               <div class="flex items-center justify-between font-bold text-gray-700 mb-2 pb-1 border-b border-gray-300/60">
                 <span class="font-mono bg-gray-800 text-white px-1.5 py-0.5 rounded text-[10px]">34 BZT 1903</span>
@@ -1087,7 +1272,6 @@
         <!-- Ürün 6: Emlak -->
         <div onclick="openSystemModal('emlak')" class="bg-white p-6 rounded-3xl border border-gray-200 shadow-sm flex flex-col justify-between hover:border-indigo-400 hover:shadow-xl transition cursor-pointer group">
           <div>
-            <!-- Mini Emlak Portföy Mockup -->
             <div class="bg-orange-50/60 p-3 rounded-2xl border border-orange-100 mb-4 text-[11px] group-hover:border-orange-200 transition">
               <div class="flex items-center justify-between font-bold text-gray-700 mb-2 pb-1 border-b border-orange-200/50">
                 <span>Kadıköy Moda 3+1</span>
@@ -1117,22 +1301,167 @@
 
       </div>
 
-      <div class="bg-gradient-to-r from-indigo-900 via-indigo-800 to-indigo-950 rounded-3xl p-8 sm:p-12 text-center text-white shadow-xl relative overflow-hidden">
-        <h3 class="text-2xl sm:text-3xl font-extrabold mb-3">İstediğiniz sistem listede yok mu?</h3>
-        <p class="text-indigo-100 text-sm sm:text-base max-w-xl mx-auto mb-6">
-          Süreçlerinizi anlatın, mevcut hazır modüllerimizi birleştirerek size özel sistemi haftalar içinde uygun fiyata kuralım.
+      <!-- Sıfırdan Özel Yazılım & Mobil Geliştirme Detayları -->
+      <div id="ozel-yazilim-detay" class="bg-white rounded-3xl p-8 sm:p-12 border border-gray-200 shadow-sm">
+        <div class="max-w-3xl mb-8">
+          <span class="text-xs font-extrabold uppercase tracking-wider text-purple-700 bg-purple-50 px-3 py-1 rounded-full border border-purple-200">Özel Mühendislik</span>
+          <h3 class="text-2xl sm:text-3xl font-black text-gray-900 mt-3 mb-2">
+            İşletmenizin İhtiyacına Özel Sıfırdan Yazılım & Mobil Uygulama
+          </h3>
+          <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
+            Paket programlara sığmayan işleyişiniz mi var? Kendi üretim hattınızı, bayi siparişlerinizi veya mobil uygulamanızı sıfırdan kodluyoruz.
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-3 gap-6 mb-8">
+          <div class="bg-gray-50 p-5 rounded-2xl border border-gray-100">
+            <div class="w-8 h-8 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center font-bold mb-3">
+              <i data-lucide="code" class="w-4 h-4"></i>
+            </div>
+            <h4 class="font-bold text-gray-900 text-sm mb-1">Özel Yönetim Panelleri</h4>
+            <p class="text-xs text-gray-600">Personel yetkilendirme, raporlama ve firmanıza has iş akışları.</p>
+          </div>
+          <div class="bg-gray-50 p-5 rounded-2xl border border-gray-100">
+            <div class="w-8 h-8 rounded-lg bg-purple-100 text-purple-600 flex items-center justify-center font-bold mb-3">
+              <i data-lucide="smartphone" class="w-4 h-4"></i>
+            </div>
+            <h4 class="font-bold text-gray-900 text-sm mb-1">Mobil Uygulama (MVP)</h4>
+            <p class="text-xs text-gray-600">iOS ve Android'de yayınlanan, push bildirimli mobil uygulamalar.</p>
+          </div>
+          <div class="bg-gray-50 p-5 rounded-2xl border border-gray-100">
+            <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold mb-3">
+              <i data-lucide="refresh-cw" class="w-4 h-4"></i>
+            </div>
+            <h4 class="font-bold text-gray-900 text-sm mb-1">API & WhatsApp Entegrasyonu</h4>
+            <p class="text-xs text-gray-600">WhatsApp otomatik bildirimleri, SMS ağ geçitleri ve veri köprüleri.</p>
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-gray-100">
+          <div class="text-xs text-gray-600">
+            ✓ Tam kaynak kod teslimi &bull; Aylık lisans bağımlılığı yok &bull; %100 yerli mühendislik
+          </div>
+          <a href="https://wa.me/905515149511?text=İşletmemize%20özel%20yazılım%20ihtiyacımız%20var,%20detayları%20konuşabilir%20miyiz?" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs px-6 py-3 rounded-xl shadow transition">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            Özel Yazılım Teklifi Al
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= 3. KATEGORİ: SOSYAL MEDYA & DİJİTAL REKLAM ================= -->
+  <section id="sosyal-medya" class="py-20 bg-white border-t border-gray-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-extrabold uppercase tracking-wider text-pink-700 bg-pink-50 px-3 py-1 rounded-full border border-pink-200">3. Kategori</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mt-3 mb-4">
+          Sosyal Medya & Dijital Reklam
+        </h2>
+        <p class="text-gray-600 text-lg">
+          Web sitenizi yaptık, peki müşteriler nereden gelecek? Bütçenizi boşa yakmadan doğrudan telefonunuza ve WhatsApp'ınıza sıcak alıcılar çeken reklam sistemleri kuruyoruz.
         </p>
-        <a href="https://wa.me/905515149511?text=Özel%20bir%20yazılım%20sistemi%20ihtiyacım%20var." target="_blank" class="inline-flex items-center gap-2 bg-white text-indigo-700 font-extrabold px-8 py-3.5 rounded-xl shadow-lg hover:bg-gray-100 transition">
-          <i data-lucide="message-circle" class="w-5 h-5 text-green-600"></i>
-          WhatsApp'tan Özel Fiyat Al
-        </a>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        
+        <!-- Kart 1: Meta Reklamları -->
+        <div class="bg-gray-50 border border-gray-200 rounded-3xl p-6 hover:border-pink-400 hover:shadow-lg transition flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-pink-100 text-pink-600 flex items-center justify-center font-bold mb-4">
+              <i data-lucide="message-square" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-bold text-gray-900 text-base mb-1">Meta WhatsApp Lead Reklamı</h3>
+            <p class="text-xs text-gray-500 mb-4">Instagram & Facebook</p>
+            <p class="text-xs text-gray-600 leading-relaxed mb-4">
+              Beğeni peşinde koşmadan, reklamınızı gören müşterinin tek tıkla doğrudan WhatsApp'ınıza mesaj atmasını sağlayan sıcak satış kampanyaları.
+            </p>
+            <ul class="space-y-1.5 text-xs text-gray-700 mb-6">
+              <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-green-500"></i> Doğrudan WhatsApp yönlendirmesi</li>
+              <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-green-500"></i> Reklam görsel & metin tasarımı</li>
+              <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-green-500"></i> İlçe/sektör nokta hedefleme</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/905515149511?text=Meta%20(Instagram/FB)%20WhatsApp%20reklamı%20hakkında%20bilgi%20almak%20istiyorum." target="_blank" class="w-full text-center bg-white border border-gray-200 hover:border-pink-500 text-gray-800 hover:text-pink-600 font-bold text-xs py-2 rounded-xl transition">
+            Bilgi Al →
+          </a>
+        </div>
+
+        <!-- Kart 2: Google Ads -->
+        <div class="bg-gray-50 border border-gray-200 rounded-3xl p-6 hover:border-blue-400 hover:shadow-lg transition flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center font-bold mb-4">
+              <i data-lucide="search" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-bold text-gray-900 text-base mb-1">Google Arama Ağı Reklamları</h3>
+            <p class="text-xs text-gray-500 mb-4">Google Ads</p>
+            <p class="text-xs text-gray-600 leading-relaxed mb-4">
+              Müşteri Google'a hizmetinizi yazdığı anda (Örn: "en yakın diş kliniği", "acil nakliyat") en tepede sizin siteniz çıksın ve doğrudan arasınlar.
+            </p>
+            <ul class="space-y-1.5 text-xs text-gray-700 mb-6">
+              <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-green-500"></i> Arama yapan sıcak müşteriyi çekme</li>
+              <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-green-500"></i> Negatif kelime filtresi (Bütçe koruma)</li>
+              <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-green-500"></i> Tıklama başı maliyet optimizasyonu</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/905515149511?text=Google%20Arama%20Ağı%20reklamları%20hakkında%20konuşmak%20istiyorum." target="_blank" class="w-full text-center bg-white border border-gray-200 hover:border-blue-500 text-gray-800 hover:text-blue-600 font-bold text-xs py-2 rounded-xl transition">
+            Bilgi Al →
+          </a>
+        </div>
+
+        <!-- Kart 3: Google Harita & Yerel SEO -->
+        <div class="bg-gray-50 border border-gray-200 rounded-3xl p-6 hover:border-emerald-400 hover:shadow-lg transition flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold mb-4">
+              <i data-lucide="map-pin" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-bold text-gray-900 text-base mb-1">Google Harita & Yerel SEO</h3>
+            <p class="text-xs text-gray-500 mb-4">Google Business</p>
+            <p class="text-xs text-gray-600 leading-relaxed mb-4">
+              Çevrenizdeki müşterilerin haritalarda işletmenizi ilk sırada bulmasını sağlayın. Yorum ve puanlama sistemini güçlendirelim.
+            </p>
+            <ul class="space-y-1.5 text-xs text-gray-700 mb-6">
+              <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-green-500"></i> Harita profil doğrulama & tescil</li>
+              <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-green-500"></i> Yerel anahtar kelime optimizasyonu</li>
+              <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-green-500"></i> 5 yıldızlı yorum toplama şablonu</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/905515149511?text=Google%20Harita%20kaydı%20ve%20Yerel%20SEO%20için%20yazıyorum." target="_blank" class="w-full text-center bg-white border border-gray-200 hover:border-emerald-500 text-gray-800 hover:text-emerald-600 font-bold text-xs py-2 rounded-xl transition">
+            Bilgi Al →
+          </a>
+        </div>
+
+        <!-- Kart 4: Sosyal Medya Yönetimi -->
+        <div class="bg-gray-50 border border-gray-200 rounded-3xl p-6 hover:border-indigo-400 hover:shadow-lg transition flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center font-bold mb-4">
+              <i data-lucide="instagram" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-bold text-gray-900 text-base mb-1">Sosyal Medya İçerik Yönetimi</h3>
+            <p class="text-xs text-gray-500 mb-4">Aylık Paket</p>
+            <p class="text-xs text-gray-600 leading-relaxed mb-4">
+              İşletmenizin Instagram ve Facebook sayfasına düzenli eğitici carousel slaytları, profesyonel afişler ve etkileşimli gönderiler hazırlıyoruz.
+            </p>
+            <ul class="space-y-1.5 text-xs text-gray-700 mb-6">
+              <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-green-500"></i> Haftalık düzenli gönderi/carousel tasarımı</li>
+              <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-green-500"></i> Biyografi & öne çıkanlar tasarımı</li>
+              <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-green-500"></i> Satış odaklı profesyonel görsel dil</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/905515149511?text=Aylık%20sosyal%20medya%20içerik%20yönetimi%20hakkında%20bilgi%20almak%20istiyorum." target="_blank" class="w-full text-center bg-white border border-gray-200 hover:border-indigo-500 text-gray-800 hover:text-indigo-600 font-bold text-xs py-2 rounded-xl transition">
+            Bilgi Al →
+          </a>
+        </div>
+
       </div>
 
     </div>
   </section>
 
   <!-- ================= NASIL ÇALIŞIYORUZ ================= -->
-  <section id="surec" class="py-20 bg-white">
+  <section id="surec" class="py-20 bg-gray-50 border-t border-gray-200">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="text-center max-w-3xl mx-auto mb-16">
         <span class="text-xs font-extrabold uppercase tracking-wider text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full border border-indigo-100">Çalışma Şeklimiz</span>
@@ -1146,7 +1475,7 @@
 
       <div class="grid md:grid-cols-4 gap-8">
         
-        <div class="text-center relative bg-gray-50 p-6 rounded-3xl border border-gray-100">
+        <div class="text-center relative bg-white p-6 rounded-3xl border border-gray-200 shadow-sm">
           <div class="w-16 h-16 bg-indigo-600 text-white font-black text-2xl rounded-2xl flex items-center justify-center mx-auto mb-5 shadow-lg shadow-indigo-200">
             01
           </div>
@@ -1156,7 +1485,7 @@
           </p>
         </div>
 
-        <div class="text-center relative bg-gray-50 p-6 rounded-3xl border border-gray-100">
+        <div class="text-center relative bg-white p-6 rounded-3xl border border-gray-200 shadow-sm">
           <div class="w-16 h-16 bg-indigo-600 text-white font-black text-2xl rounded-2xl flex items-center justify-center mx-auto mb-5 shadow-lg shadow-indigo-200">
             02
           </div>
@@ -1166,23 +1495,23 @@
           </p>
         </div>
 
-        <div class="text-center relative bg-gray-50 p-6 rounded-3xl border border-gray-100">
+        <div class="text-center relative bg-white p-6 rounded-3xl border border-gray-200 shadow-sm">
           <div class="w-16 h-16 bg-indigo-600 text-white font-black text-2xl rounded-2xl flex items-center justify-center mx-auto mb-5 shadow-lg shadow-indigo-200">
             03
           </div>
-          <h4 class="font-bold text-gray-900 text-lg mb-2">3-7 Günde Teslimat</h4>
+          <h4 class="font-bold text-gray-900 text-lg mb-2">Canlıda Test Edin & Onaylayın</h4>
           <p class="text-xs text-gray-600 leading-relaxed">
-            Landing page 3 günde, kurumsal siteler 7 günde tamamlanır. Test bağlantısı size gönderilir.
+            Siteniz veya yazılımınız kurulur, canlı test linki paylaşılır. İstediğiniz düzenlemeler yapılana kadar süreç devam eder.
           </p>
         </div>
 
-        <div class="text-center relative bg-gray-50 p-6 rounded-3xl border border-gray-100">
+        <div class="text-center relative bg-white p-6 rounded-3xl border border-gray-200 shadow-sm">
           <div class="w-16 h-16 bg-indigo-600 text-white font-black text-2xl rounded-2xl flex items-center justify-center mx-auto mb-5 shadow-lg shadow-indigo-200">
             04
           </div>
-          <h4 class="font-bold text-gray-900 text-lg mb-2">Onay & 1 Ay Destek</h4>
+          <h4 class="font-bold text-gray-900 text-lg mb-2">Anahtar Teslim & 1 Ay Destek</h4>
           <p class="text-xs text-gray-600 leading-relaxed">
-            Siz onayladıktan sonra kalan %50 ödenir. Kodlar devredilir ve 1 ay boyunca ücretsiz teknik destek verilir.
+            Tüm şifreler, alan adı ve yönetim paneli size teslim edilir. Teslimden sonra 1 ay boyunca teknik destek verilir.
           </p>
         </div>
 
@@ -1218,21 +1547,35 @@
 
         <details class="group bg-gray-50 border border-gray-200 rounded-2xl p-5 [&_summary::-webkit-details-marker]:hidden cursor-pointer">
           <summary class="flex items-center justify-between font-bold text-gray-900 text-base">
-            <span>Fiyatlar neden piyasaya göre bu kadar rekabetçi ve uygun?</span>
+            <span>3.450 ₺ ile 4.950 ₺ paketleri arasındaki fark tam olarak nedir, hangisini seçmeliyim?</span>
             <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 group-open:rotate-180 transition"></i>
           </summary>
           <p class="mt-3 text-sm text-gray-600 leading-relaxed border-t border-gray-200 pt-3">
-            Geleneksel ajansların yüksek genel giderlerini (lüks ofis kiraları, kalabalık komisyoncu ekipler vb.) faturanıza yansıtmıyoruz. Modern altyapılar, yeni nesil kod kütüphaneleri ve yapay zeka destekli optimize edilmiş süreçlerimiz sayesinde kaliteli işleri çok daha hızlı ve ekonomik olarak üretiyoruz.
+            Her iki pakette de sitenizin tasarımı, hızı, mobil uyumu ve kalitesi birebir aynıdır. Aradaki tek fark barındırma altyapısı ve kurumsal e-postadır: 
+            <br><br>
+            • <strong>3.450 ₺ (Modern Web Sitesi):</strong> Siteniz Vercel gibi yeni nesil küresel bulut sunucularda ücretsiz barındırılır. Sunucu masrafı çıkmadığı için fiyat çok uygundur. Müşterileriniz doğrudan WhatsApp veya telefonla ulaşıyorsa bu paket en mantıklı seçimdir.
+            <br><br>
+            • <strong>4.950 ₺ (Web Sitesi + Kurumsal E-Posta):</strong> Adınıza yıllık özel kurumsal web hosting satın alınır. Bu sayede şirket uzantılı resmi e-postalar (info@firmaniz.com vb.) açılır ve sitedeki iletişim formları çalışır.
           </p>
         </details>
 
         <details class="group bg-gray-50 border border-gray-200 rounded-2xl p-5 [&_summary::-webkit-details-marker]:hidden cursor-pointer">
           <summary class="flex items-center justify-between font-bold text-gray-900 text-base">
-            <span>Ödeme seçenekleri ve süreç nasıl işliyor?</span>
+            <span>Yapay Zeka SEO Otomasyonu gerçekten Google'da sıralama kazandırır mı?</span>
             <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 group-open:rotate-180 transition"></i>
           </summary>
           <p class="mt-3 text-sm text-gray-600 leading-relaxed border-t border-gray-200 pt-3">
-            Banka havalesi, EFT veya FAST ile güvenli ve kolay şekilde ödemenizi yapabilirsiniz. Başlangıçta anlaşılan sabit fiyat dışında hiçbir gizli maliyet veya ek masraf çıkmaz.
+            Evet. Google algoritmaları düzenli güncellenen, ziyaretçinin aradığı sorulara net cevap veren siteleri ödüllendirir. Yapay zeka motorumuz sektörünüzdeki sıcak arama terimlerini tarar ve haftada 2-4 adet %100 özgün, görsel destekli makale yayınlar. Böylece Google sitenizi sektöründe otorite kabul ederek hedef kelimelerinizde sıralamanızı yukarı taşır.
+          </p>
+        </details>
+
+        <details class="group bg-gray-50 border border-gray-200 rounded-2xl p-5 [&_summary::-webkit-details-marker]:hidden cursor-pointer">
+          <summary class="flex items-center justify-between font-bold text-gray-900 text-base">
+            <span>Fiyatlar neden piyasaya göre bu kadar rekabetçi ve uygun?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 group-open:rotate-180 transition"></i>
+          </summary>
+          <p class="mt-3 text-sm text-gray-600 leading-relaxed border-t border-gray-200 pt-3">
+            Geleneksel ajansların yüksek genel giderlerini (lüks ofis kiraları, kalabalık komisyoncu ekipler vb.) faturanıza yansıtmıyoruz. Modern bulut altyapılar, yeni nesil kod kütüphaneleri ve yapay zeka destekli optimize edilmiş süreçlerimiz sayesinde kaliteli işleri çok daha hızlı ve ekonomik olarak üretiyoruz.
           </p>
         </details>
 
@@ -1248,15 +1591,11 @@
 
         <details class="group bg-gray-50 border border-gray-200 rounded-2xl p-5 [&_summary::-webkit-details-marker]:hidden cursor-pointer">
           <summary class="flex items-center justify-between font-bold text-gray-900 text-base">
-            <span>3.450 ₺ ile 4.950 ₺ paketleri arasındaki fark tam olarak nedir, hangisini seçmeliyim?</span>
+            <span>Sitemi daha sonra kendim güncelleyebilir miyim?</span>
             <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 group-open:rotate-180 transition"></i>
           </summary>
           <p class="mt-3 text-sm text-gray-600 leading-relaxed border-t border-gray-200 pt-3">
-            Her iki pakette de sitenizin tasarımı, hızı, mobil uyumu ve kalitesi birebir aynıdır. Aradaki tek fark barındırma altyapısı ve kurumsal e-postadır: 
-            <br><br>
-            • <strong>3.450 ₺ (Modern Web Sitesi):</strong> Siteniz Vercel gibi yeni nesil küresel bulut sunucularda ücretsiz barındırılır. Sunucu masrafı çıkmadığı için fiyat çok uygundur. Müşterileriniz doğrudan WhatsApp veya telefonla ulaşıyorsa bu paket en mantıklı seçimdir.
-            <br><br>
-            • <strong>4.950 ₺ (Web Sitesi + Kurumsal E-Posta):</strong> Adınıza yıllık özel kurumsal web hosting satın alınır. Bu sayede şirket uzantılı resmi e-postalar (info@firmaniz.com vb.) açılır ve sitedeki iletişim formları çalışır.
+            Evet, hazırladığımız sitelerde kullanımı son derece pratik bir yönetim paneli entegre ediyoruz. Cep telefonunuzdan veya bilgisayarınızdan ürünlerinizi, metinlerinizi ve fotoğraflarınızı kolayca güncelleyebilirsiniz.
           </p>
         </details>
 
@@ -1297,9 +1636,12 @@
         © 2026 Bastet Yazılım. Tüm hakları saklıdır. Uygun fiyat, yüksek performans.
       </div>
 
-      <div class="flex items-center gap-6 justify-center text-xs">
-        <a href="#hizmetler" class="hover:text-white transition">Hizmetler</a>
+      <div class="flex flex-wrap items-center gap-5 justify-center text-xs">
         <a href="#fiyatlar" class="hover:text-white transition">Fiyatlar</a>
+        <a href="#web-hizmetleri" class="hover:text-white transition">Web Hizmetleri</a>
+        <a href="#seo-hizmetleri" class="hover:text-white transition text-emerald-400">SEO Otomasyonu</a>
+        <a href="#yazilimlar" class="hover:text-white transition">Yazılımlar</a>
+        <a href="#sosyal-medya" class="hover:text-white transition">Sosyal Medya</a>
         <a href="#sss" class="hover:text-white transition">SSS</a>
         <a href="https://wa.me/905515149511" target="_blank" class="text-green-400 hover:text-green-300 transition font-bold">WhatsApp İletişim</a>
       </div>
@@ -1590,5 +1932,3 @@
   </script>
 </body>
 </html>
-
-
